@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뷰티업종 광고 제안서 | AMPM GLOBAL 퍼포먼스 3본부 2팀</title>
+    <!-- Google Fonts: 고운돋움 & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'GowunDodum';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        :root {
+            --bg-color: #F5F5F5;
+            --main-color: #F5F5F5;
+            --sub-color: #BC636A;
+            --sub-color-light: rgba(188, 99, 106, 0.15);
+            --sub-color-glow: rgba(188, 99, 106, 0.45);
+            --sub-color-dark: #8c3f46;
+            --text-color: #1A1A1A;
+            --text-muted: #444444;
+            --text-light: #777777;
+            /* Enhanced Higher Transparency Glassmorphism */
+            --glass-bg: rgba(255, 255, 255, 0.48);
+            --glass-card: rgba(255, 255, 255, 0.58);
+            --glass-card-hover: rgba(255, 255, 255, 0.78);
+            --glass-border: rgba(255, 255, 255, 0.85);
+            --glass-shadow: 
+                inset 1.5px 1.5px 3px rgba(255, 255, 255, 0.95),
+                inset -1.5px -1.5px 3px rgba(0, 0, 0, 0.05),
+                0 20px 45px rgba(0, 0, 0, 0.08),
+                0 4px 16px rgba(188, 99, 106, 0.08);
+            --font-family: 'Gowun Dodum', 'GowunDodum', 'Outfit', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+            --font-en: 'Outfit', 'Gowun Dodum', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+            word-break: keep-all;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #D8D8D8;
+            font-family: var(--font-family);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 16:9 Presentation Stage Wrapper */
+        #presentation-stage {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+            background-color: var(--bg-color);
+            overflow: hidden;
+            transform-origin: center center;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Slim Global Navigation Bar */
+        .global-top-bar {
+            width: 100%;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 48px;
+            position: relative;
+            z-index: 100;
+            flex-shrink: 0;
+        }
+
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--font-en);
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-color);
+            letter-spacing: -0.01em;
+        }
+
+        .brand-logo-area .company-name {
+            color: var(--sub-color);
+            font-weight: 900;
+            font-size: 19px;
+        }
+
+        .brand-logo-area .divider-line {
+            width: 1.5px;
+            height: 18px;
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        .brand-logo-area .dept-name {
+            font-family: var(--font-family);
+            font-size: 14px;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .slide-tabs {
+            display: flex;
+            gap: 6px;
+            background: rgba(245, 245, 245, 0.78);
+            backdrop-filter: blur(16px);
+            padding: 4px 8px;
+            border-radius: 30px;
+            border: 1px solid rgba(188, 99, 106, 0.25);
+        }
+
+        .tab-btn {
+            padding: 6px 13px;
+            border-radius: 20px;
+            border: none;
+            background: transparent;
+            font-family: var(--font-family);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--sub-color);
+            background: rgba(188, 99, 106, 0.12);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #BC636A, #9e4a51);
+            color: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(188, 99, 106, 0.35);
+        }
+
+        .tab-btn .tab-num {
+            font-family: var(--font-en);
+            font-size: 11px;
+            padding: 1px 5px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.08);
+        }
+
+        .tab-btn.active .tab-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+        }
+
+        /* Slides Container */
+        .slides-container {
+            width: 100%;
+            height: calc(1080px - 64px);
+            position: relative;
+            flex-grow: 1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(0.98);
+            padding: 34px 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            z-index: 2;
+        }
+
+        /* Dynamic Bouncing Bubbles & Background */
+        .bg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .bouncing-bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95) 0%, rgba(253, 230, 233, 0.7) 45%, rgba(188, 99, 106, 0.4) 80%, rgba(188, 99, 106, 0.15) 100%);
+            box-shadow: inset -15px -15px 35px rgba(188, 99, 106, 0.35),
+                        inset 15px 15px 35px rgba(255, 255, 255, 0.95),
+                        0 25px 60px rgba(188, 99, 106, 0.22),
+                        0 8px 20px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(8px);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            animation: bounceLively 6s ease-in-out infinite alternate;
+        }
+
+        .bubble-1 { width: 350px; height: 350px; top: 70px; right: 90px; animation-duration: 5.5s; }
+        .bubble-2 { width: 250px; height: 250px; bottom: 90px; left: 70px; animation-duration: 6.8s; animation-delay: -2s; }
+        .bubble-3 { width: 160px; height: 160px; top: 22%; left: 14%; animation-duration: 4.8s; animation-delay: -1s; }
+        .bubble-4 { width: 200px; height: 200px; bottom: 20%; right: 20%; animation-duration: 6.2s; animation-delay: -3.5s; }
+
+        @keyframes bounceLively {
+            0% { transform: translateY(0px) scale(1) rotate(0deg); }
+            50% { transform: translateY(-60px) scale(1.1) rotate(14deg); }
+            100% { transform: translateY(50px) scale(0.94) rotate(-10deg); }
+        }
+
+        /* Slide Header Layout */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 14px;
+            border-bottom: 1.5px solid rgba(188, 99, 106, 0.22);
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: linear-gradient(135deg, rgba(188, 99, 106, 0.2), rgba(188, 99, 106, 0.06));
+            border: 1.5px solid rgba(188, 99, 106, 0.42);
+            border-radius: 30px;
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--sub-color);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            width: fit-content;
+            backdrop-filter: blur(8px);
+        }
+
+        .badge-tag .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--sub-color);
+            box-shadow: 0 0 10px var(--sub-color-glow);
+        }
+
+        .slide-title {
+            font-size: 34px;
+            font-weight: 800;
+            color: var(--text-color);
+            letter-spacing: -0.02em;
+        }
+
+        .slide-subtitle {
+            font-size: 16.5px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .header-right {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .client-pill {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--glass-card);
+            backdrop-filter: blur(20px);
+            padding: 8px 20px;
+            border-radius: 40px;
+            border: 1.5px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .agency-meta {
+            font-size: 13px;
+            color: var(--text-light);
+            font-family: var(--font-en);
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        /* Slide Body Layouts */
+        .slide-body {
+            position: relative;
+            z-index: 10;
+            display: grid;
+            grid-template-columns: 480px 1fr;
+            gap: 28px;
+            height: 865px;
+            margin-top: 14px;
+        }
+
+        .slide-body.full-width {
+            grid-template-columns: 1fr;
+            height: 865px;
+        }
+
+        .slide-body.split-2 {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            height: 865px;
+        }
+
+        .slide-body.split-with-image {
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 32px;
+            height: 865px;
+        }
+
+        .left-col, .right-col {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            justify-content: space-between;
+        }
+
+        /* Transparent Real-Glass Cards */
+        .meta-overview-card {
+            background: rgba(255, 255, 255, 0.58);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border-radius: 20px;
+            padding: 22px 24px;
+            border: 1.5px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+        }
+
+        .meta-title {
+            font-size: 15.5px;
+            font-weight: 800;
+            color: var(--sub-color);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+        }
+
+        .meta-label {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .meta-val {
+            font-size: 15.5px;
+            color: var(--text-color);
+            font-weight: 800;
+        }
+
+        .meta-val.highlight {
+            color: var(--sub-color);
+        }
+
+        .solution-card {
+            background: rgba(255, 255, 255, 0.54);
+            backdrop-filter: blur(28px) saturate(180%);
+            border-radius: 20px;
+            padding: 24px;
+            border: 1.5px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .solution-heading {
+            font-size: 16.5px;
+            font-weight: 800;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .solution-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .solution-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 18px;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 14px;
+            border-left: 5px solid var(--sub-color);
+            border-top: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(12px);
+        }
+
+        .glass-3d-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 14px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 240, 242, 0.9) 100%);
+            border: 1.5px solid rgba(255, 255, 255, 0.95);
+            box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 1),
+                        inset -2px -2px 6px rgba(188, 99, 106, 0.2),
+                        0 8px 16px rgba(188, 99, 106, 0.14);
+            color: var(--sub-color);
+        }
+
+        .solution-text h4 {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 4px;
+        }
+
+        .solution-text p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .channel-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .channel-chip {
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            background: rgba(188, 99, 106, 0.12);
+            border: 1px solid rgba(188, 99, 106, 0.25);
+            color: var(--sub-color-dark);
+            border-radius: 8px;
+        }
+
+        /* Metrics Hero Row */
+        .metrics-hero-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.58);
+            backdrop-filter: blur(28px) saturate(180%);
+            border-radius: 20px;
+            padding: 22px 24px;
+            border: 1.5px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .metric-card.main-highlight {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.8) 0%, rgba(253, 240, 243, 0.65) 100%);
+            border: 2px solid rgba(188, 99, 106, 0.5);
+            box-shadow: 0 16px 36px rgba(188, 99, 106, 0.16);
+        }
+
+        .metric-label {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .metric-value {
+            font-family: var(--font-en);
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin: 6px 0 2px;
+            letter-spacing: -0.03em;
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .metric-value.highlight {
+            color: var(--sub-color);
+        }
+
+        .metric-value .unit {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--sub-color);
+        }
+
+        .metric-footer {
+            font-size: 13.5px;
+            color: #27ae60;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Chart Panel */
+        .chart-panel {
+            background: rgba(255, 255, 255, 0.56);
+            backdrop-filter: blur(28px) saturate(180%);
+            border-radius: 22px;
+            padding: 24px 28px;
+            border: 1.5px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .chart-title-group h3 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-color);
+        }
+
+        .chart-title-group p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+        }
+
+        .chart-legend {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .legend-color {
+            width: 13px;
+            height: 13px;
+            border-radius: 4px;
+        }
+
+        .legend-color.before {
+            background-color: #D6D6D6;
+        }
+
+        .legend-color.after {
+            background: linear-gradient(135deg, #BC636A, #d87d85);
+            box-shadow: 0 2px 6px rgba(188, 99, 106, 0.35);
+        }
+
+        /* Chart Container */
+        .chart-container {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            gap: 28px;
+            padding: 10px 10px 30px 48px;
+            border-bottom: 1.5px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .chart-y-axis {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-family: var(--font-en);
+            font-size: 13px;
+            color: var(--text-light);
+            font-weight: 700;
+            text-align: right;
+            width: 38px;
+        }
+
+        .chart-grid-lines {
+            position: absolute;
+            top: 10px;
+            left: 48px;
+            right: 0;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .grid-line {
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.06);
+        }
+
+        .chart-bar-group {
+            flex: 1;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bars-wrapper {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            width: 100%;
+            justify-content: center;
+            height: 200px;
+        }
+
+        .chart-bar {
+            width: 38px;
+            border-radius: 8px 8px 3px 3px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .chart-bar:hover {
+            transform: scaleY(1.03);
+            filter: brightness(1.05);
+        }
+
+        .chart-bar.before-bar {
+            background: #D8D8D8;
+        }
+
+        .chart-bar.after-bar {
+            background: linear-gradient(180deg, #BC636A 0%, #a44d54 100%);
+            box-shadow: 0 8px 18px rgba(188, 99, 106, 0.35);
+        }
+
+        .bar-tooltip {
+            position: absolute;
+            top: -26px;
+            font-family: var(--font-en);
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--text-color);
+            white-space: nowrap;
+        }
+
+        .chart-bar.after-bar .bar-tooltip {
+            color: var(--sub-color);
+            font-size: 14.5px;
+            font-weight: 900;
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -28px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        /* Large & Prominent Takeaway Hero Banner */
+        .takeaway-hero-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(254, 235, 238, 0.75) 100%);
+            backdrop-filter: blur(28px) saturate(180%);
+            border: 2.5px solid rgba(188, 99, 106, 0.6);
+            border-radius: 20px;
+            padding: 22px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 16px;
+            box-shadow: var(--glass-shadow), 0 14px 35px rgba(188, 99, 106, 0.2);
+            position: relative;
+            overflow: hidden;
+            animation: softPulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes softPulseGlow {
+            0% { box-shadow: 0 10px 25px rgba(188, 99, 106, 0.16); border-color: rgba(188, 99, 106, 0.5); }
+            100% { box-shadow: 0 18px 45px rgba(188, 99, 106, 0.32); border-color: rgba(188, 99, 106, 0.85); }
+        }
+
+        .takeaway-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .takeaway-badge-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #BC636A, #8c3f46);
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 18px rgba(188, 99, 106, 0.4);
+            flex-shrink: 0;
+        }
+
+        .takeaway-content-wrap h4 {
+            font-size: 18.5px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .takeaway-content-wrap p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .takeaway-highlight-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 2px;
+            padding-left: 24px;
+            border-left: 2px solid rgba(188, 99, 106, 0.35);
+            flex-shrink: 0;
+        }
+
+        .takeaway-highlight-badge .tag-title {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            font-weight: 700;
+        }
+
+        .takeaway-highlight-badge .tag-val {
+            font-family: var(--font-en);
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--sub-color);
+            letter-spacing: -0.02em;
+        }
+
+        /* Generic Big Card Style */
+        .big-glass-card {
+            background: rgba(255, 255, 255, 0.58);
+            backdrop-filter: blur(28px) saturate(180%);
+            -webkit-backdrop-filter: blur(28px) saturate(180%);
+            border: 1.8px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 36px 40px;
+            box-shadow: var(--glass-shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .big-highlight-tag {
+            margin-top: 22px;
+            padding: 16px 22px;
+            background: linear-gradient(135deg, rgba(253, 240, 243, 0.95) 0%, rgba(255, 255, 255, 0.88) 100%);
+            border: 1.8px solid rgba(188, 99, 106, 0.45);
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--sub-color-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 18px rgba(188, 99, 106, 0.12);
+        }
+
+        /* =========================================================
+           INTERACTIVE ACCORDION / EXPANDABLE CARDS (SLIDES 4, 6, 8)
+        ========================================================= */
+        .interactive-card {
+            background: rgba(255, 255, 255, 0.54);
+            backdrop-filter: blur(28px) saturate(180%);
+            border: 2px solid var(--glass-border);
+            border-radius: 22px;
+            padding: 26px 28px;
+            box-shadow: var(--glass-shadow);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .interactive-card:hover, .interactive-card.expanded {
+            background: rgba(255, 255, 255, 0.82);
+            border-color: rgba(188, 99, 106, 0.6);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 25px 60px rgba(188, 99, 106, 0.22), inset 1px 1px 2px rgba(255, 255, 255, 1);
+        }
+
+        .interactive-card .card-hint {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--sub-color);
+            background: rgba(188, 99, 106, 0.12);
+            padding: 4px 10px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.25s;
+        }
+
+        .interactive-card:hover .card-hint, .interactive-card.expanded .card-hint {
+            background: var(--sub-color);
+            color: #FFFFFF;
+        }
+
+        .interactive-reveal-content {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, margin-top 0.35s ease;
+            margin-top: 0;
+        }
+
+        .interactive-card:hover .interactive-reveal-content,
+        .interactive-card.expanded .interactive-reveal-content {
+            max-height: 280px;
+            opacity: 1;
+            margin-top: 16px;
+        }
+
+        /* Slide 4 Problem-Solution Grid */
+        .s4-parallel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            height: 100%;
+        }
+
+        .s4-card-num {
+            font-family: var(--font-en);
+            font-size: 16px;
+            font-weight: 900;
+            color: #FFFFFF;
+            background: linear-gradient(135deg, #BC636A, #9e4a51);
+            padding: 5px 14px;
+            border-radius: 20px;
+            width: fit-content;
+            margin-bottom: 14px;
+            letter-spacing: 0.05em;
+        }
+
+        .s4-card-title {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .s4-card-body-text {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .s4-solution-badge-box {
+            padding: 16px 20px;
+            background: linear-gradient(135deg, rgba(254, 237, 240, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
+            border: 2px solid rgba(188, 99, 106, 0.55);
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(188, 99, 106, 0.12);
+        }
+
+        .s4-solution-badge-box .badge-label {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--sub-color);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .s4-solution-badge-box .badge-action-text {
+            font-size: 16.5px;
+            font-weight: 800;
+            color: var(--text-color);
+            line-height: 1.45;
+        }
+
+        /* Slide 5 Restored Balanced Full-Funnel Architecture */
+        .s5-funnel-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .funnel-step-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(28px) saturate(180%);
+            border: 2px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 24px 34px;
+            display: grid;
+            grid-template-columns: 180px 240px 1fr;
+            align-items: center;
+            gap: 24px;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            transition: transform 0.25s, background 0.25s;
+        }
+
+        .funnel-step-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.82);
+            border-color: rgba(188, 99, 106, 0.5);
+            box-shadow: 0 16px 36px rgba(188, 99, 106, 0.16);
+        }
+
+        .funnel-step-tag {
+            font-family: var(--font-en);
+            font-size: 15px;
+            font-weight: 900;
+            padding: 10px 18px;
+            border-radius: 30px;
+            text-align: center;
+            color: #fff;
+            letter-spacing: 0.05em;
+        }
+
+        .funnel-step-1 { background: linear-gradient(135deg, #BC636A, #d87d85); }
+        .funnel-step-2 { background: linear-gradient(135deg, #aa5259, #BC636A); }
+        .funnel-step-3 { background: linear-gradient(135deg, #8c3f46, #aa5259); }
+
+        .funnel-media-badge {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--sub-color-dark);
+            background: rgba(188, 99, 106, 0.12);
+            padding: 10px 18px;
+            border-radius: 14px;
+            border: 1.5px solid rgba(188, 99, 106, 0.28);
+            text-align: center;
+        }
+
+        .funnel-desc-text {
+            font-size: 16px;
+            color: var(--text-color);
+            line-height: 1.55;
+            font-weight: 600;
+        }
+
+        .s5-punchline-hero {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 237, 240, 0.9) 100%);
+            backdrop-filter: blur(28px);
+            border: 2.8px solid rgba(188, 99, 106, 0.65);
+            border-radius: 20px;
+            padding: 24px 36px;
+            text-align: center;
+            box-shadow: 0 16px 40px rgba(188, 99, 106, 0.22);
+            animation: softPulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        .s5-punchline-hero h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-color);
+            letter-spacing: -0.02em;
+        }
+
+        .s5-punchline-hero h3 span {
+            color: var(--sub-color);
+            font-weight: 900;
+            border-bottom: 3.5px solid rgba(188, 99, 106, 0.45);
+            padding-bottom: 2px;
+        }
+
+        /* Slide 8 Network Cards */
+        .s8-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            height: 100%;
+        }
+
+        .s8-badge-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 22px;
+            background: linear-gradient(135deg, #BC636A, #9e4a51);
+            color: #FFFFFF;
+            font-family: var(--font-en);
+            font-size: 20px;
+            font-weight: 900;
+            border-radius: 30px;
+            box-shadow: 0 6px 16px rgba(188, 99, 106, 0.35);
+            margin-bottom: 14px;
+            width: fit-content;
+        }
+
+        .s8-heading {
+            font-size: 23px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .s8-desc {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Image Display Placeholders for Slides 7 & 9 */
+        .image-placeholder-frame {
+            background: rgba(255, 255, 255, 0.52);
+            backdrop-filter: blur(28px);
+            border: 2.5px dashed rgba(188, 99, 106, 0.45);
+            border-radius: 24px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+            gap: 16px;
+            box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s;
+        }
+
+        .image-placeholder-frame:hover {
+            background: rgba(255, 255, 255, 0.75);
+            border-color: var(--sub-color);
+            box-shadow: 0 15px 40px rgba(188, 99, 106, 0.15);
+        }
+
+        .placeholder-icon-circle {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(188, 99, 106, 0.18), rgba(255, 255, 255, 0.9));
+            border: 1.5px solid rgba(188, 99, 106, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sub-color);
+        }
+
+        .placeholder-text h4 {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 6px;
+        }
+
+        .placeholder-text p {
+            font-size: 14.5px;
+            color: var(--text-light);
+            line-height: 1.55;
+        }
+
+        /* Navigation Buttons */
+        .presentation-nav {
+            position: absolute;
+            bottom: 24px;
+            right: 48px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(24px) saturate(180%);
+            padding: 8px 18px;
+            border-radius: 40px;
+            border: 1.8px solid var(--glass-border);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(188, 99, 106, 0.08);
+            animation: navFloat 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes navFloat {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-3px); }
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(188, 99, 106, 0.25);
+            padding: 8px 14px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            color: var(--text-color);
+            font-family: var(--font-family);
+            font-size: 13.5px;
+            font-weight: 700;
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(135deg, #BC636A, #9e4a51);
+            color: #FFFFFF;
+            border-color: transparent;
+            box-shadow: 0 4px 12px rgba(188, 99, 106, 0.35);
+            transform: scale(1.05);
+        }
+
+        .nav-btn:active { transform: scale(0.96); }
+
+        .slide-indicator {
+            font-family: var(--font-en);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            padding: 0 4px;
+        }
+
+        .slide-indicator .current {
+            color: var(--sub-color);
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .side-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1.5px solid var(--glass-border);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 90;
+            color: var(--text-color);
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .side-arrow.prev { left: 16px; }
+        .side-arrow.next { right: 16px; }
+        .side-arrow:hover { background: var(--sub-color); color: #FFFFFF; box-shadow: 0 8px 24px rgba(188, 99, 106, 0.45); }
+        .side-arrow.prev:hover { transform: translateY(-50%) translateX(-4px) scale(1.08); }
+        .side-arrow.next:hover { transform: translateY(-50%) translateX(4px) scale(1.08); }
+    </style>
+</head>
+<body>
+
+    <div id="presentation-stage">
+        <!-- Top Slim Global Navigation Bar -->
+        <div class="global-top-bar">
+            <div class="brand-logo-area">
+                <span class="company-name">AMPM GLOBAL</span>
+                <span class="divider-line"></span>
+                <span class="dept-name">퍼포먼스 3본부 2팀 · 고지훈 AE</span>
+            </div>
+
+            <!-- 10 Slide Navigation Tabs -->
+            <div class="slide-tabs">
+                <button class="tab-btn active" onclick="goToSlide(0)"><span class="tab-num">01</span><span>표지</span></button>
+                <button class="tab-btn" onclick="goToSlide(1)"><span class="tab-num">02</span><span>마녀공장</span></button>
+                <button class="tab-btn" onclick="goToSlide(2)"><span class="tab-num">03</span><span>파워풀엑스</span></button>
+                <button class="tab-btn" onclick="goToSlide(3)"><span class="tab-num">04</span><span>광고 필요성</span></button>
+                <button class="tab-btn" onclick="goToSlide(4)"><span class="tab-num">05</span><span>퍼널 전략</span></button>
+                <button class="tab-btn" onclick="goToSlide(5)"><span class="tab-num">06</span><span>메타 신규확보</span></button>
+                <button class="tab-btn" onclick="goToSlide(6)"><span class="tab-num">07</span><span>메타 소재전략</span></button>
+                <button class="tab-btn" onclick="goToSlide(7)"><span class="tab-num">08</span><span>네트워크 배너</span></button>
+                <button class="tab-btn" onclick="goToSlide(8)"><span class="tab-num">09</span><span>데이터 최적화</span></button>
+                <button class="tab-btn" onclick="goToSlide(9)"><span class="tab-num">10</span><span>E.O.D</span></button>
+            </div>
+        </div>
+
+        <!-- Ambient Background Canvas with Dynamic Bouncing Bubbles -->
+        <div class="bg-canvas">
+            <div class="bouncing-bubble bubble-1"></div>
+            <div class="bouncing-bubble bubble-2"></div>
+            <div class="bouncing-bubble bubble-3"></div>
+            <div class="bouncing-bubble bubble-4"></div>
+        </div>
+
+        <!-- Side Navigation Arrows -->
+        <div class="side-arrow prev" onclick="prevSlide()" title="이전 슬라이드 (←)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        </div>
+        <div class="side-arrow next" onclick="nextSlide()" title="다음 슬라이드 (→)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-container">
+
+            <!-- ==============================================
+                 SLIDE 1: 표지
+            =============================================== -->
+            <div class="slide active" id="slide-0">
+                <div class="cover-content" style="display:flex; justify-content:center; align-items:center; height:100%;">
+                    <div class="big-glass-card" style="max-width: 1060px; padding: 65px 80px; width: 100%;">
+                        <div class="badge-tag">
+                            <span class="dot"></span>
+                            BEAUTY MARKETING PROPOSAL
+                        </div>
+                        <h1 class="cover-main-title" style="font-size: 58px; font-weight: 800; line-height: 1.22; margin: 24px 0 18px; letter-spacing: -0.03em;">
+                            뷰티업종 맞춤형<br>
+                            <span style="color: var(--sub-color);">퍼포먼스 광고 제안서</span>
+                        </h1>
+                        <p class="cover-desc" style="font-size: 21px; color: var(--text-muted); line-height: 1.6; margin-bottom: 38px;">
+                            데이터 드리븐 멀티 매체 믹스와 고효율 크리에이티브 설계를 통한<br>
+                            지속 가능한 매출 성장 및 ROAS 극대화 솔루션
+                        </p>
+                        <div class="cover-meta-box" style="display: flex; align-items: center; gap: 24px; padding-top: 26px; border-top: 2px solid rgba(188, 99, 106, 0.25);">
+                            <div style="font-size: 18px; font-weight: 800; color: var(--text-color);">AMPM GLOBAL 퍼포먼스 3본부 2팀</div>
+                            <div style="height: 24px; width: 2px; background: rgba(188, 99, 106, 0.35);"></div>
+                            <div style="font-size: 18px; font-weight: 900; color: var(--sub-color);">고지훈 AE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 2: 마녀공장 레퍼런스
+            =============================================== -->
+            <div class="slide" id="slide-1">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>CASE STUDY · REFERENCE 01</div>
+                        <h1 class="slide-title">네이버 SA 및 DA 광고전환 매출액 증대</h1>
+                        <p class="slide-subtitle">프로모션 연계 채널별 맞춤 캠페인 설계를 통한 전환 매출 및 ROAS 극대화</p>
+                    </div>
+                    <div class="header-right">
+                        <div class="client-pill">
+                            <span class="agency-meta" style="margin-right:4px;">광고주</span>
+                            <svg width="115" height="32" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <text x="0" y="32" font-family="'Outfit', -apple-system, sans-serif" font-weight="900" font-size="36" fill="#C41230" letter-spacing="-1">ma:nyo</text>
+                            </svg>
+                        </div>
+                        <span class="agency-meta">AMPM GLOBAL · BEAUTY PERFORMANCE</span>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="left-col">
+                        <div class="meta-overview-card">
+                            <div class="meta-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                캠페인 개요 (Overview)
+                            </div>
+                            <div class="meta-grid">
+                                <div class="meta-row">
+                                    <span class="meta-label">업종</span>
+                                    <span class="meta-val">뷰티 · 스킨케어 화장품</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">광고 KPI</span>
+                                    <span class="meta-val highlight">전환 매출액 증대 & ROAS 극대화</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">운영 기간</span>
+                                    <span class="meta-val">2021.08 ~ 2025.07 (4개년 장기 운영)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="solution-card">
+                            <div class="solution-heading">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                브랜드 솔루션 (Brand Solutions)
+                            </div>
+                            <div class="solution-list">
+                                <div class="solution-item">
+                                    <div class="glass-3d-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                                    </div>
+                                    <div class="solution-text">
+                                        <h4>풀퍼널 멀티 매체 믹스 전개</h4>
+                                        <p>검색부터 숏폼, 리타겟팅까지 유기적 매체 연동 집행</p>
+                                        <div class="channel-tags">
+                                            <span class="channel-chip">네이버 SA/DA</span>
+                                            <span class="channel-chip">카카오</span>
+                                            <span class="channel-chip">구글</span>
+                                            <span class="channel-chip">틱톡</span>
+                                            <span class="channel-chip">버즈빌</span>
+                                            <span class="channel-chip">크리테오</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="solution-item">
+                                    <div class="glass-3d-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                                    </div>
+                                    <div class="solution-text">
+                                        <h4>채널별 프로모션 맞춤 캠페인</h4>
+                                        <p>공식몰, 네이버 브랜드스토어, 올리브영 등 판매처별 특성에 최적화된 시즌별 이벤트 세팅</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="metrics-hero-row">
+                            <div class="metric-card main-highlight">
+                                <div class="metric-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                    핵심 성과 (ROAS)
+                                </div>
+                                <div class="metric-value highlight">+150<span class="unit">%</span></div>
+                                <div class="metric-footer">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                                    기존 집행 대비 지속 상승세 기록
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8"/><path d="M8 8h8v8"/></svg>
+                                    전환 매출액 성장률
+                                </div>
+                                <div class="metric-value">2.4<span class="unit">배</span></div>
+                                <div class="metric-footer">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                                    프로모션 기간 집중 유입
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                    광고 효율 최적화 지수
+                                </div>
+                                <div class="metric-value">94.8<span class="unit">%</span></div>
+                                <div class="metric-footer">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                                    채널별 이탈률 대폭 방어
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-panel">
+                            <div class="chart-header">
+                                <div class="chart-title-group">
+                                    <h3>캠페인 운영 전후 ROAS 및 전환 효율 추이 비교</h3>
+                                    <p>채널 맞춤 세팅 및 풀퍼널 믹스 적용에 따른 성과 지표 비교 (400% 만점 기준)</p>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item"><div class="legend-color before"></div><span>기존 대행/운영</span></div>
+                                    <div class="legend-item"><div class="legend-color after"></div><span>AMPM 글로벌 운영 성과</span></div>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <div class="chart-y-axis">
+                                    <span>400%</span><span>300%</span><span>200%</span><span>100%</span><span>0%</span>
+                                </div>
+                                <div class="chart-grid-lines">
+                                    <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 70px;"><span class="bar-tooltip">140%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 175px;"><span class="bar-tooltip">+150%↑ (350%)</span></div>
+                                    </div>
+                                    <span class="bar-label">통합 ROAS 성과</span>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 80px;"><span class="bar-tooltip">160%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 160px;"><span class="bar-tooltip">320%</span></div>
+                                    </div>
+                                    <span class="bar-label">공식몰 & 브랜드스토어</span>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 60px;"><span class="bar-tooltip">120%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 140px;"><span class="bar-tooltip">280%</span></div>
+                                    </div>
+                                    <span class="bar-label">올리브영 행사 연계</span>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 45px;"><span class="bar-tooltip">90%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 130px;"><span class="bar-tooltip">260%</span></div>
+                                    </div>
+                                    <span class="bar-label">DA / 리타겟팅 CVR</span>
+                                </div>
+                            </div>
+
+                            <div class="takeaway-hero-card">
+                                <div class="takeaway-left">
+                                    <div class="takeaway-badge-icon">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    </div>
+                                    <div class="takeaway-content-wrap">
+                                        <h4>최종 핵심 성과 및 인사이트 (Key Takeaway)</h4>
+                                        <p>매월 올리브영·브랜드스토어 빅세일 일정에 맞춘 다매체 유기적 퍼널 세팅 및 즉각적인 소재 최적화 완료</p>
+                                    </div>
+                                </div>
+                                <div class="takeaway-highlight-badge">
+                                    <span class="tag-title">기존 대비 최종 성과</span>
+                                    <span class="tag-val">ROAS +150% ↑</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 3: 파워풀엑스 레퍼런스
+            =============================================== -->
+            <div class="slide" id="slide-2">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>CASE STUDY · REFERENCE 02</div>
+                        <h1 class="slide-title">네이버 SA 및 DA 광고매출 및 ROAS 개선</h1>
+                        <p class="slide-subtitle">종합 광고 최적화 및 신규 타겟 발굴, 저효율 매체 필터링을 통한 2배 이상 효율 상승</p>
+                    </div>
+                    <div class="header-right">
+                        <div class="client-pill">
+                            <span class="agency-meta" style="margin-right:4px;">광고주</span>
+                            <svg width="145" height="34" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="1.5" y="1.5" width="197" height="45" rx="22.5" fill="#FFFFFF" stroke="#C41230" stroke-width="3"/>
+                                <path d="M2 24C2 11.8497 11.8497 2 24 2H100V46H24C11.8497 46 2 36.1503 2 24Z" fill="#C41230"/>
+                                <text x="22" y="32" font-family="'Outfit', 'Impact', sans-serif" font-weight="900" font-size="23" fill="#FFFFFF" letter-spacing="-0.5">Power</text>
+                                <circle cx="98" cy="24" r="6.5" fill="#C41230" stroke="#FFFFFF" stroke-width="2.5"/>
+                                <circle cx="98" cy="24" r="2.2" fill="#FFFFFF"/>
+                                <text x="108" y="32" font-family="'Outfit', 'Impact', sans-serif" font-weight="900" font-size="23" fill="#C41230" letter-spacing="-0.5">fulX</text>
+                            </svg>
+                        </div>
+                        <span class="agency-meta">AMPM GLOBAL · BEAUTY PERFORMANCE</span>
+                    </div>
+                </div>
+
+                <div class="slide-body">
+                    <div class="left-col">
+                        <div class="meta-overview-card">
+                            <div class="meta-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                캠페인 개요 (Overview)
+                            </div>
+                            <div class="meta-grid">
+                                <div class="meta-row">
+                                    <span class="meta-label">업종</span>
+                                    <span class="meta-val">화장품 제조업 · 리커버리 뷰티</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">광고 KPI</span>
+                                    <span class="meta-val highlight">매출액 증대 & ROAS 2배 이상 개선</span>
+                                </div>
+                                <div class="meta-row">
+                                    <span class="meta-label">운영 기간</span>
+                                    <span class="meta-val">2019.03 ~ 현재 진행 중 (롱텀 파트너십)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="solution-card">
+                            <div class="solution-heading">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                                브랜드 솔루션 (Brand Solutions)
+                            </div>
+                            <div class="solution-list">
+                                <div class="solution-item">
+                                    <div class="glass-3d-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                                    </div>
+                                    <div class="solution-text">
+                                        <h4>종합 매체 믹스 & 최적화 작업</h4>
+                                        <p>주요 포털 및 네트워크 배너를 연계하여 신규 타겟 오디언스 발굴</p>
+                                        <div class="channel-tags">
+                                            <span class="channel-chip">네이버 SA/DA</span>
+                                            <span class="channel-chip">카카오</span>
+                                            <span class="channel-chip">구글</span>
+                                            <span class="channel-chip">ADN 네트워크</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="solution-item">
+                                    <div class="glass-3d-icon">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                                    </div>
+                                    <div class="solution-text">
+                                        <h4>저효율 매체 필터링 & 신규 매체 추천</h4>
+                                        <p>실시간 CVR/CPA 모니터링을 통한 누수 예산 차단 및 고효율 지면 집중 집행</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-col">
+                        <div class="metrics-hero-row">
+                            <div class="metric-card main-highlight">
+                                <div class="metric-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                    ROAS 성장률
+                                </div>
+                                <div class="metric-value highlight">2.0<span class="unit">배 이상 (+100%)</span></div>
+                                <div class="metric-footer">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                                    대행 전 대비 200% 수준 달성
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    대표 상품 누적 판매량
+                                </div>
+                                <div class="metric-value">500<span class="unit">만개 돌파</span></div>
+                                <div class="metric-footer">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                                    업계 1등 리커버리 크림 포지셔닝
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-label">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                    전환 단가 (CPA) 절감률
+                                </div>
+                                <div class="metric-value">-42.3<span class="unit">%</span></div>
+                                <div class="metric-footer">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                                    저효율 지면 필터링 성과
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-panel">
+                            <div class="chart-header">
+                                <div class="chart-title-group">
+                                    <h3>대행 전 vs AMPM 운영 후 ROAS 및 지면별 효율 개선 비교</h3>
+                                    <p>매체 최적화 및 저효율 필터링 전략에 따른 전후 데이터 (400% 만점 기준 비율 일치)</p>
+                                </div>
+                                <div class="chart-legend">
+                                    <div class="legend-item"><div class="legend-color before"></div><span>대행 전 성과</span></div>
+                                    <div class="legend-item"><div class="legend-color after"></div><span>AMPM 글로벌 대행 후</span></div>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <div class="chart-y-axis">
+                                    <span>400%</span><span>300%</span><span>200%</span><span>100%</span><span>0%</span>
+                                </div>
+                                <div class="chart-grid-lines">
+                                    <div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 75px;"><span class="bar-tooltip">150%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 155px;"><span class="bar-tooltip">2배↑ (310%)</span></div>
+                                    </div>
+                                    <span class="bar-label">전체 ROAS (2배 개선)</span>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 95px;"><span class="bar-tooltip">190%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 195px;"><span class="bar-tooltip">390%</span></div>
+                                    </div>
+                                    <span class="bar-label">네이버 SA/브랜드검색</span>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 60px;"><span class="bar-tooltip">120%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 135px;"><span class="bar-tooltip">270%</span></div>
+                                    </div>
+                                    <span class="bar-label">카카오 & 구글 DA</span>
+                                </div>
+
+                                <div class="chart-bar-group">
+                                    <div class="bars-wrapper">
+                                        <div class="chart-bar before-bar" style="height: 45px;"><span class="bar-tooltip">90%</span></div>
+                                        <div class="chart-bar after-bar" style="height: 120px;"><span class="bar-tooltip">240%</span></div>
+                                    </div>
+                                    <span class="bar-label">ADN 네트워크 배너</span>
+                                </div>
+                            </div>
+
+                            <div class="takeaway-hero-card">
+                                <div class="takeaway-left">
+                                    <div class="takeaway-badge-icon">
+                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    </div>
+                                    <div class="takeaway-content-wrap">
+                                        <h4>최종 핵심 성과 및 인사이트 (Key Takeaway)</h4>
+                                        <p>매체별 전환 데이터 기반의 철저한 저효율 필터링과 타겟 세분화로 광고비 누수 차단 및 ROAS 200% 달성</p>
+                                    </div>
+                                </div>
+                                <div class="takeaway-highlight-badge">
+                                    <span class="tag-title">대행 전 대비 최종 성과</span>
+                                    <span class="tag-val">ROAS 2배↑ (200%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 4: 왜 뷰티업종의 광고가 필요한가 (Interactive Reveal Cards)
+            =============================================== -->
+            <div class="slide" id="slide-3">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>MARKET INSIGHT</div>
+                        <h1 class="slide-title">왜 뷰티업종의 광고가 필수적인가</h1>
+                        <p class="slide-subtitle">포화된 뷰티 생태계의 3대 핵심 과제와 이를 해결하는 명확한 퍼포먼스 솔루션</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="agency-meta">AMPM GLOBAL · BEAUTY STRATEGY</span>
+                    </div>
+                </div>
+
+                <div class="slide-body full-width">
+                    <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between; gap: 20px;">
+                        <!-- 3 Interactive Hover/Click Unfold Cards -->
+                        <div class="s4-parallel-grid">
+                            <!-- Card 1 -->
+                            <div class="interactive-card" onclick="this.classList.toggle('expanded')">
+                                <div class="card-hint">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                                    솔루션 보기
+                                </div>
+                                <div>
+                                    <div class="s4-card-num">과제 01</div>
+                                    <h3 class="s4-card-title">브랜드 고유 가치 전달의 필요성</h3>
+                                    <p class="s4-card-body-text">
+                                        화장품 제조 기술의 상향 평준화로 제품력 자체만으로는 차별화가 어렵습니다. 고기능성 성분의 복잡한 과학적 효능을 소비자가 쉽게 이해하고 공감하도록 번역해야 합니다.
+                                    </p>
+                                </div>
+                                <div class="interactive-reveal-content">
+                                    <div class="s4-solution-badge-box">
+                                        <div class="badge-label">💡 해결 솔루션</div>
+                                        <div class="badge-action-text">차별화된 브랜드 USP 각인 및 프리미엄 가치 부여</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="interactive-card" onclick="this.classList.toggle('expanded')">
+                                <div class="card-hint">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                                    솔루션 보기
+                                </div>
+                                <div>
+                                    <div class="s4-card-num">과제 02</div>
+                                    <h3 class="s4-card-title">인디 브랜드 홍수 속 발견 가능성 확보</h3>
+                                    <p class="s4-card-body-text">
+                                        진입 장벽 완화로 수많은 신규 브랜드가 쏟아지는 환경입니다. 정밀 타겟팅된 광고 없이는 소비자의 탐색 피드에 브랜드가 노출될 기회조차 얻기 어렵습니다.
+                                    </p>
+                                </div>
+                                <div class="interactive-reveal-content">
+                                    <div class="s4-solution-badge-box">
+                                        <div class="badge-label">🎯 해결 솔루션</div>
+                                        <div class="badge-action-text">숏폼 및 SNS 피드 점유율 선점 & 신규 잠재 모수 확장</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="interactive-card" onclick="this.classList.toggle('expanded')">
+                                <div class="card-hint">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                                    솔루션 보기
+                                </div>
+                                <div>
+                                    <div class="s4-card-num">과제 03</div>
+                                    <h3 class="s4-card-title">글로벌 및 온·오프라인 진입 동력</h3>
+                                    <p class="s4-card-body-text">
+                                        올리브영, 아마존, 해외 오프라인 유통 채널 입점을 위해 선행되어야 하는 온라인 트래픽과 리뷰 데이터를 광고를 통해 인위적으로 폭발 점화합니다.
+                                    </p>
+                                </div>
+                                <div class="interactive-reveal-content">
+                                    <div class="s4-solution-badge-box">
+                                        <div class="badge-label">🚀 해결 솔루션</div>
+                                        <div class="badge-action-text">온·오프라인 채널 확장 트리거 구축 및 초기 트래픽 점화</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Enlarged Key Reason Hero Banner -->
+                        <div class="takeaway-hero-card" style="padding: 22px 34px;">
+                            <div class="takeaway-left">
+                                <div class="takeaway-badge-icon" style="width: 58px; height: 58px;">
+                                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                                </div>
+                                <div class="takeaway-content-wrap">
+                                    <h4 style="font-size: 19.5px; margin-bottom: 4px;">광고를 집행해야 하는 본질적인 이유</h4>
+                                    <p style="font-size: 16px; line-height: 1.55; color: var(--text-color);">
+                                        “광고는 단순히 제품을 알리는 수단을 넘어, 수많은 선택지 앞에서 길을 잃은 소비자에게 <strong>우리 브랜드를 반드시 선택해야 하는 명확한 명분과 경험</strong>을 쥐여주는 가장 적극적인 커뮤니케이션입니다.”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 5: 어떻게 광고할 것인가 (Restored Balanced Full-Funnel Architecture)
+            =============================================== -->
+            <div class="slide" id="slide-4">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>MARKETING FUNNEL</div>
+                        <h1 class="slide-title">어떻게 광고할 것인가 : 풀퍼널(Full-Funnel) 마케팅 전략</h1>
+                        <p class="slide-subtitle">인지부터 유입, 최종 구매 전환과 재구매까지 이어지는 유기적인 비즈니스 선순환 구조 구축</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="agency-meta">AMPM GLOBAL · PERFORMANCE ARCHITECTURE</span>
+                    </div>
+                </div>
+
+                <div class="slide-body full-width">
+                    <div class="s5-funnel-wrapper">
+                        <!-- 3 Funnel Stage Cards -->
+                        <div class="funnel-step-card">
+                            <div class="funnel-step-tag funnel-step-1">STAGE 01 · 인지</div>
+                            <div class="funnel-media-badge">META · TikTok · YouTube</div>
+                            <div class="funnel-desc-text">
+                                <strong>브랜드 USP 제안 및 소비자 인식 침투:</strong> 숏폼 영상 및 시각적 크리에이티브를 통해 뷰티 브랜드의 핵심 차별점을 각인시키고 잠재 모수를 대량 확보
+                            </div>
+                        </div>
+
+                        <div class="funnel-step-card">
+                            <div class="funnel-step-tag funnel-step-2">STAGE 02 · 유입</div>
+                            <div class="funnel-media-badge">META · NAVER SA/DA</div>
+                            <div class="funnel-desc-text">
+                                <strong>소비자 페인포인트 자극 및 유입 루트 장악:</strong> 피부 고민 키워드 및 검색광고 선점을 통해 구매 의도가 높은 진성 고객을 상세페이지 및 브랜드스토어로 직접 유입
+                            </div>
+                        </div>
+
+                        <div class="funnel-step-card">
+                            <div class="funnel-step-tag funnel-step-3">STAGE 03 · 전환</div>
+                            <div class="funnel-media-badge">META · KAKAO · TG · ADN</div>
+                            <div class="funnel-desc-text">
+                                <strong>초정밀 리타겟팅 & 즉각적인 결제 유도:</strong> 장바구니 이탈자 및 최근 조회자에게 리타겟팅 배너를 재노출하고 한정 프로모션을 강조하여 최종 구매 전환 완성
+                            </div>
+                        </div>
+
+                        <!-- Big Sales Punchline Hero Banner -->
+                        <div class="s5-punchline-hero">
+                            <h3>“저희는 단순히 광고를 만드는 것이 아닙니다. 지속 가능한 <span>비즈니스의 선순환 구조</span>를 만듭니다.”</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 6: 메타 광고 운영 - 신규 고객 확보 (Interactive Reveal & Compact Layout)
+            =============================================== -->
+            <div class="slide" id="slide-5">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>CHANNEL STRATEGY · META 01</div>
+                        <h1 class="slide-title">메타(Meta) 광고 운영 : 시각적 콘텐츠 & 신규 고객 확보</h1>
+                        <p class="slide-subtitle">뷰티 맞춤형 시각 콘텐츠로 브랜드 인지도를 형성하고 구매 전환율이 높은 신규 유저를 대량 유치</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="agency-meta">AMPM GLOBAL · META CAMPAIGN</span>
+                    </div>
+                </div>
+
+                <div class="slide-body split-2">
+                    <div class="interactive-card" onclick="this.classList.toggle('expanded')" style="justify-content: flex-start; gap: 20px;">
+                        <div class="card-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            성과 기대치
+                        </div>
+                        <div>
+                            <div class="big-card-badge" style="font-family: var(--font-en); font-size: 22px; font-weight: 900; color: var(--sub-color); background: rgba(188, 99, 106, 0.14); width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">A</div>
+                            <h3 class="big-card-heading" style="font-size: 26px; font-weight: 800; color: var(--text-color); margin-bottom: 12px;">시각적 임팩트를 통한 브랜드 각인</h3>
+                            <p class="big-card-desc" style="font-size: 16px; color: var(--text-muted); line-height: 1.65;">
+                                제형의 텍스처, 전후 비포/애프터, 피부 장벽 흡수 과정을 직관적으로 보여주는 뷰티 특화 영상 및 캐러셀 광고를 통해 피드 스크롤을 멈추게 만듭니다.
+                            </p>
+                            <div class="channel-tags" style="margin-top: 14px;">
+                                <span class="channel-chip">#숏폼릴스최적화</span>
+                                <span class="channel-chip">#비포애프터후킹</span>
+                                <span class="channel-chip">#제형클로즈업뷰</span>
+                            </div>
+                        </div>
+                        <div class="interactive-reveal-content">
+                            <div class="big-highlight-tag" style="margin-top: 0;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 004 4h12"/></svg>
+                                <span>피드 체류 시간 극대화 & 3초 후킹 설계로 신규 유입 점유</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-card" onclick="this.classList.toggle('expanded')" style="justify-content: flex-start; gap: 20px;">
+                        <div class="card-hint">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            성과 기대치
+                        </div>
+                        <div>
+                            <div class="big-card-badge" style="font-family: var(--font-en); font-size: 22px; font-weight: 900; color: var(--sub-color); background: rgba(188, 99, 106, 0.14); width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">B</div>
+                            <h3 class="big-card-heading" style="font-size: 26px; font-weight: 800; color: var(--text-color); margin-bottom: 12px;">신규 타겟 유입 + 구매 전환 최적화</h3>
+                            <p class="big-card-desc" style="font-size: 16px; color: var(--text-muted); line-height: 1.65;">
+                                어드밴티지+ 쇼핑 캠페인과 유사 타겟 머신러닝을 활용하여 기존 고객과 유사한 고가치 신규 뷰티 소비자를 자동으로 타겟팅하고 즉각적인 구매 전환을 이끌어냅니다.
+                            </p>
+                            <div class="channel-tags" style="margin-top: 14px;">
+                                <span class="channel-chip">#어드밴티지쇼핑</span>
+                                <span class="channel-chip">#고가치뷰티구매자</span>
+                                <span class="channel-chip">#머신러닝최적화</span>
+                            </div>
+                        </div>
+                        <div class="interactive-reveal-content">
+                            <div class="big-highlight-tag" style="margin-top: 0;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                                <span>머신러닝 기반 신규 타겟 오디언스 자동 확장 및 전환 극대화</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 7: 메타 광고 운영 - 소재 전략 (Spacious Left Column & Large Goal Banner)
+            =============================================== -->
+            <div class="slide" id="slide-6">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>CREATIVE STRATEGY · META 02</div>
+                        <h1 class="slide-title">메타 광고의 핵심 : 소재(Creative) 전략 & 제작 지원</h1>
+                        <p class="slide-subtitle">"메타 광고는 소재로 성과가 판가름납니다" — 피로도를 줄이고 효율을 극대화하는 소재 제작 체계</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="agency-meta">AMPM GLOBAL · CREATIVE LAB</span>
+                    </div>
+                </div>
+
+                <div class="slide-body split-with-image">
+                    <!-- Left: Spacious & Balanced Content Column -->
+                    <div class="left-col" style="justify-content: space-between; gap: 24px;">
+                        <div class="solution-list" style="display: flex; flex-direction: column; gap: 22px;">
+                            <div class="solution-item" style="padding: 24px 26px;">
+                                <div class="glass-3d-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                </div>
+                                <div class="solution-text">
+                                    <h4 style="font-size: 18px;">01. 초기 무료 소재 2~3종 무상 제작 지원</h4>
+                                    <p style="font-size: 15.5px; margin-top: 5px;">캠페인 런칭 시 브랜드 무드와 타겟 페르소나에 최적화된 뷰티 후킹 소재(이미지/카드뉴스/모션)를 기본 2~3종 무료로 직접 기획·제작하여 테스트베드를 신속히 구축합니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution-item" style="padding: 24px 26px;">
+                                <div class="glass-3d-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                </div>
+                                <div class="solution-text">
+                                    <h4 style="font-size: 18px;">02. 고효율 맞춤 제작 지속 지원</h4>
+                                    <p style="font-size: 15.5px; margin-top: 5px;">초기 라이브 데이터 검증 후 위닝(Winning) 소재를 기반으로 소정의 제작 리소스를 통해 다채로운 베리에이션 소재를 끊임없이 공급하여 광고 피로도를 사전 차단합니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution-item" style="padding: 24px 26px;">
+                                <div class="glass-3d-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+                                </div>
+                                <div class="solution-text">
+                                    <h4 style="font-size: 18px;">03. CTR 향상 및 다매체 리소스 절약 (OSMU)</h4>
+                                    <p style="font-size: 15.5px; margin-top: 5px;">메타에서 검증된 고효율 크리에이티브는 네이버 GFA, 카카오 모먼트, 네트워크 배너 등 전 매체로 즉각 리사이징 확장되어 제작 리소스를 획기적으로 절감합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Big Goal Banner -->
+                        <div class="big-highlight-tag" style="margin-top: 8px; padding: 20px 26px;">
+                            🎯 <span>핵심 목표 : 광고 피로도 사전 방어 + CTR 극대화 & 전 매체 제작 리소스 절감</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Empty Image Frame -->
+                    <div class="right-col">
+                        <div class="image-placeholder-frame">
+                            <div class="placeholder-icon-circle">
+                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            </div>
+                            <div class="placeholder-text">
+                                <h4>메타 광고 레퍼런스 구획</h4>
+                                <p>경쟁사 및 자사 우수 뷰티 크리에이티브 소재 이미지 첨부 영역</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 8: 네트워크 배너 광고 운영 (Interactive Reveal Cards)
+            =============================================== -->
+            <div class="slide" id="slide-7">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>RETARGETING · NETWORK BANNER</div>
+                        <h1 class="slide-title">네트워크 배너 광고 운영 (ADN · TG · 모비온)</h1>
+                        <p class="slide-subtitle">구매 가능성이 높은 잠재 고객의 웹 서핑 동선을 따라 지속적인 리타겟팅 배너 노출</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="agency-meta">AMPM GLOBAL · DSP NETWORK</span>
+                    </div>
+                </div>
+
+                <div class="slide-body full-width">
+                    <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between; gap: 20px;">
+                        <!-- 3 Interactive Cards -->
+                        <div class="s8-grid">
+                            <div class="interactive-card" onclick="this.classList.toggle('expanded')">
+                                <div class="card-hint">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                                    핵심 지면
+                                </div>
+                                <div>
+                                    <div class="s8-badge-box">ADN</div>
+                                    <h3 class="s8-heading">프리미엄 포털 네트워크</h3>
+                                    <p class="s8-desc">
+                                        네이버, 카카오, 주요 언론사 등 국내 최상위 트래픽 매체를 아우르는 프리미엄 인벤토리에 노출하여 브랜드 신뢰도와 구매 전환을 동시에 확보합니다.
+                                    </p>
+                                </div>
+                                <div class="interactive-reveal-content">
+                                    <div class="big-highlight-tag" style="margin-top: 0; padding: 14px 18px;">
+                                        🏆 <span>포털급 프리미엄 지면 커버리지</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="interactive-card" onclick="this.classList.toggle('expanded')">
+                                <div class="card-hint">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                                    핵심 지면
+                                </div>
+                                <div>
+                                    <div class="s8-badge-box">TG</div>
+                                    <h3 class="s8-heading">광범위 리치 통합 네트워크</h3>
+                                    <p class="s8-desc">
+                                        다양한 브랜드 사이트, 커뮤니티, 전문 매체와 제휴된 폭넓은 리치를 통해 뷰티 관심 유저의 일상 디지털 접점을 촘촘하게 장악합니다.
+                                    </p>
+                                </div>
+                                <div class="interactive-reveal-content">
+                                    <div class="big-highlight-tag" style="margin-top: 0; padding: 14px 18px;">
+                                        🌐 <span>방대한 제휴사 풀 & 고도화 타겟팅</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="interactive-card" onclick="this.classList.toggle('expanded')">
+                                <div class="card-hint">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                                    핵심 지면
+                                </div>
+                                <div>
+                                    <div class="s8-badge-box">모비온</div>
+                                    <h3 class="s8-heading">데이터 기반 퍼포먼스 리타겟팅</h3>
+                                    <p class="s8-desc">
+                                        장바구니 담기, 상세페이지 체류 등 행동 데이터를 정밀 분석하여 구매 직전 유저에게 맞춤형 상품 배너를 노출하는 퍼포먼스 특화 엔진입니다.
+                                    </p>
+                                </div>
+                                <div class="interactive-reveal-content">
+                                    <div class="big-highlight-tag" style="margin-top: 0; padding: 14px 18px;">
+                                        ⚡ <span>이탈 고객 즉각 회수 & CVR 극대화</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Summary -->
+                        <div class="takeaway-hero-card" style="padding: 20px 30px;">
+                            <div class="takeaway-left">
+                                <div class="takeaway-badge-icon" style="width: 52px; height: 52px;">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                </div>
+                                <div class="takeaway-content-wrap">
+                                    <h4 style="font-size: 18px;">네트워크 배너 통합 운영 기대 성과</h4>
+                                    <p style="font-size: 14.5px;">포털, 제휴사, 리타겟팅 엔진의 3중 그물망 세팅으로 뷰티 구매 관심 고객의 이탈률을 0%에 가깝게 방어합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 9: 데이터 분석 및 최적화 (Left: Spacious Content, Right: Image Placeholder)
+            =============================================== -->
+            <div class="slide" id="slide-8">
+                <div class="slide-header">
+                    <div class="header-left">
+                        <div class="badge-tag"><span class="dot"></span>DATA & OPTIMIZATION</div>
+                        <h1 class="slide-title">데이터 분석 및 최적화 (Analytics & Growth)</h1>
+                        <p class="slide-subtitle">단순 집행에 그치지 않고 정밀 데이터 트래킹을 통해 광고 효율을 지속적으로 개선합니다</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="agency-meta">AMPM GLOBAL · TRACKING ARCHITECTURE</span>
+                    </div>
+                </div>
+
+                <div class="slide-body split-with-image">
+                    <!-- Left: Spacious Content Column -->
+                    <div class="left-col" style="justify-content: space-between; gap: 24px;">
+                        <div style="display: flex; flex-direction: column; gap: 24px;">
+                            <div class="solution-item" style="padding: 26px 28px;">
+                                <div class="glass-3d-icon">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                </div>
+                                <div class="solution-text">
+                                    <h4 style="font-size: 18.5px;">01. Pixel & CAPI 전환 추적 인프라 완비</h4>
+                                    <p style="font-size: 15.5px; margin-top: 6px;">iOS 개인정보 보호 강화 환경에서도 누수 없는 서버 사이드 전환 API(CAPI)와 픽셀 정밀 연동을 통해 온전한 전환 데이터를 확보하고 머신러닝 최적화를 가속화합니다.</p>
+                                </div>
+                            </div>
+
+                            <div class="solution-item" style="padding: 26px 28px;">
+                                <div class="glass-3d-icon">
+                                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                                </div>
+                                <div class="solution-text">
+                                    <h4 style="font-size: 18.5px;">02. CTR · CVR · CPA · ROAS 다차원 분석</h4>
+                                    <p style="font-size: 15.5px; margin-top: 6px;">클릭률(CTR)과 전환율(CVR), 전환단가(CPA)를 실시간 모니터링하여 저효율 매체는 즉각 예산을 축소하고 고효율 캠페인에 예산을 집중 투입(Scale-up)합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Big Goal Banner -->
+                        <div class="big-highlight-tag" style="margin-top: 8px; padding: 20px 26px;">
+                            📈 <span>핵심 목표 : 광고 효율의 점진적·지속적 개선 및 데이터 기반 예산 스케일업 (Scale-up) 달성</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Empty Image Frame -->
+                    <div class="right-col">
+                        <div class="image-placeholder-frame">
+                            <div class="placeholder-icon-circle">
+                                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                            </div>
+                            <div class="placeholder-text">
+                                <h4>데이터 분석 대시보드 / 성과 리포트 레퍼런스 구획</h4>
+                                <p>CAPI 트래킹 및 다차원 성과 지표 대시보드 캡처 이미지 첨부 영역</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==============================================
+                 SLIDE 10: E.O.D (Restored Centered Grand Ending Layout)
+            =============================================== -->
+            <div class="slide" id="slide-9">
+                <div class="cover-content" style="display:flex; justify-content:center; align-items:center; height:100%;">
+                    <div class="big-glass-card" style="max-width: 980px; padding: 60px 75px; text-align: center; margin: 0 auto; width: 100%;">
+                        <div class="badge-tag" style="margin: 0 auto;">
+                            <span class="dot"></span>
+                            END OF DOCUMENT
+                        </div>
+                        <h1 class="cover-main-title" style="font-size: 48px; font-weight: 800; line-height: 1.25; margin: 24px 0 16px; text-align: center;">
+                            귀사의 성공적인 뷰티 비즈니스를 위한<br>
+                            <span style="color: var(--sub-color);">최고의 퍼포먼스 마케팅 파트너</span>
+                        </h1>
+                        <p class="cover-desc" style="font-size: 19px; color: var(--text-muted); line-height: 1.65; margin-bottom: 36px; text-align: center;">
+                            경쟁이 치열한 뷰티 시장에서 명확한 데이터와 최적의 크리에이티브로<br>
+                            확실한 성장 궤도를 함께 만들어가겠습니다.
+                        </p>
+                        <div class="cover-meta-box" style="justify-content: center; width: 100%; display: flex; align-items: center; gap: 24px; padding-top: 24px; border-top: 2px solid rgba(188, 99, 106, 0.22);">
+                            <div style="font-size: 17.5px; font-weight: 800; color: var(--text-color);">AMPM GLOBAL 퍼포먼스 3본부 2팀</div>
+                            <div style="height: 22px; width: 2px; background: rgba(188, 99, 106, 0.35);"></div>
+                            <div style="font-size: 17.5px; font-weight: 900; color: var(--sub-color);">고지훈 AE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom Navigation & Page Indicator -->
+        <div class="presentation-nav">
+            <button class="nav-btn" onclick="prevSlide()" title="이전 슬라이드 (←)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                <span>이전</span>
+            </button>
+            <div class="slide-indicator">
+                <span class="current" id="current-slide-num">01</span> / 10
+            </div>
+            <button class="nav-btn" onclick="nextSlide()" title="다음 슬라이드 (→)">
+                <span>다음</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Responsive Auto-Scaling Script -->
+    <script>
+        const stage = document.getElementById('presentation-stage');
+        const STAGE_WIDTH = 1920;
+        const STAGE_HEIGHT = 1080;
+
+        function resizeStage() {
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            const scaleX = windowWidth / STAGE_WIDTH;
+            const scaleY = windowHeight / STAGE_HEIGHT;
+            const scale = Math.min(scaleX, scaleY);
+
+            stage.style.transform = `scale(${scale})`;
+            stage.style.position = 'absolute';
+            stage.style.left = `${(windowWidth - STAGE_WIDTH) / 2}px`;
+            stage.style.top = `${(windowHeight - STAGE_HEIGHT) / 2}px`;
+        }
+
+        window.addEventListener('resize', resizeStage);
+        window.addEventListener('load', resizeStage);
+        resizeStage();
+
+        // Slide Management
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const tabs = document.querySelectorAll('.tab-btn');
+        const currentNumDisplay = document.getElementById('current-slide-num');
+
+        function updateSlideUI() {
+            slides.forEach((slide, idx) => {
+                if (idx === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            tabs.forEach((tab, idx) => {
+                if (idx === currentSlide) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            currentNumDisplay.textContent = (currentSlide + 1).toString().padStart(2, '0');
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlideUI();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            updateSlideUI();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            updateSlideUI();
+        }
+
+        // Keyboard Controls
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
