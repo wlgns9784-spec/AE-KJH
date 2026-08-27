@@ -1,0 +1,3834 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건강기능식품 맞춤형 통합 온라인 퍼포먼스 광고 제안서</title>
+    <!-- Paperlogy Webfont & Pretendard Fallback -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+            font-weight: 200;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Paperlogy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+
+        :root {
+            --bg-color: #F4F2F9;
+            --main-color: #FF6A1C;
+            --main-light: #FFF0E8;
+            --main-gradient: linear-gradient(135deg, #FF6A1C 0%, #FF8F42 100%);
+            --sub-color: #FFDA62;
+            --sub-gradient: linear-gradient(135deg, #FFDA62 0%, #FFB428 100%);
+            --accent-gradient: linear-gradient(135deg, #FF6A1C 0%, #FFDA62 100%);
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A5E;
+            --text-muted: #88889D;
+            --glass-bg: rgba(255, 255, 255, 0.72);
+            --glass-card: rgba(255, 255, 255, 0.68);
+            --glass-border: rgba(255, 255, 255, 0.88);
+            --glass-shadow: 0 16px 40px rgba(32, 20, 50, 0.05);
+            --glass-glow: 0 8px 32px rgba(255, 106, 28, 0.12);
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        body {
+            background-color: #121118;
+            color: var(--text-primary);
+            font-family: 'Paperlogy', 'Pretendard', sans-serif;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* Presentation Viewport */
+        #presentation-viewport {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: #181720;
+        }
+
+
+        #slide-container {
+            width: 1920px;
+            height: 1080px;
+            position: absolute;
+            transform-origin: center center;
+            background-color: var(--bg-color);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+
+        /* Ambient Glowing Spheres (Ref 1 Style) */
+        .ambient-sphere {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.75;
+            animation: floatOrb 12s ease-in-out infinite alternate;
+        }
+
+
+        .sphere-1 {
+            width: 550px;
+            height: 550px;
+            background: radial-gradient(circle, rgba(255, 106, 28, 0.35) 0%, rgba(255, 106, 28, 0) 70%);
+            top: -100px;
+            right: -80px;
+        }
+
+
+        .sphere-2 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 218, 98, 0.45) 0%, rgba(255, 218, 98, 0) 70%);
+            bottom: -150px;
+            left: -100px;
+            animation-duration: 15s;
+        }
+
+
+        .sphere-3 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 106, 28, 0.25) 0%, rgba(255, 218, 98, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
+            top: 40%;
+            left: 35%;
+            animation-duration: 18s;
+        }
+
+
+        .grid-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(180, 170, 200, 0.22) 1.5px, transparent 1.5px);
+            background-size: 36px 36px;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -40px) scale(1.08); }
+            100% { transform: translate(-25px, 30px) scale(0.95); }
+        }
+
+
+        /* Slide Base */
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(16px) scale(0.99);
+            z-index: 2;
+            padding: 46px 85px;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) scale(1);
+            z-index: 3;
+        }
+
+
+        /* Header Bar inside Slide */
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 22px;
+            position: relative;
+            z-index: 5;
+            flex-shrink: 0;
+        }
+
+
+        .slide-tag-group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+
+        .tag-pill {
+            background: rgba(255, 106, 28, 0.12);
+            color: var(--main-color);
+            border: 1px solid rgba(255, 106, 28, 0.28);
+            padding: 7px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        .tag-pill::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: var(--main-color);
+            border-radius: 50%;
+        }
+
+
+        .header-title-box h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .header-title-box h2 span.accent {
+            color: var(--main-color);
+        }
+
+
+        .header-brand {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .header-brand .logo-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--main-gradient);
+            border-radius: 3px;
+            transform: rotate(45deg);
+        }
+
+
+        /* Glassmorphism Card Style */
+        .glass-panel {
+            background: var(--glass-card);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1.5px solid var(--glass-border);
+            border-radius: 26px;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        /* ==========================================
+           SLIDE 1: COVER
+           ========================================== */
+        .slide-1-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 5;
+        }
+
+
+        .cover-hero-card {
+            width: 1420px;
+            padding: 80px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+
+        .cover-badge-top {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(255, 106, 28, 0.3);
+            box-shadow: 0 8px 20px rgba(255, 106, 28, 0.1);
+            padding: 10px 26px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--main-color);
+            letter-spacing: 1.5px;
+            margin-bottom: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .cover-title {
+            font-size: 60px;
+            font-weight: 900;
+            line-height: 1.25;
+            color: var(--text-primary);
+            letter-spacing: -1.5px;
+            margin-bottom: 25px;
+            max-width: 1200px;
+        }
+
+
+        .cover-title .highlight-gradient {
+            background: var(--main-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+
+        .cover-subtitle {
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 980px;
+            margin-bottom: 55px;
+            letter-spacing: -0.3px;
+        }
+
+
+        .cover-subtitle strong {
+            color: var(--main-color);
+            font-weight: 800;
+            background: rgba(255, 106, 28, 0.08);
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+
+        .cover-meta-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--glass-border);
+            padding: 18px 45px;
+            border-radius: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+
+        .meta-item .meta-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: var(--main-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+
+        .meta-divider {
+            width: 1px;
+            height: 24px;
+            background: rgba(0, 0, 0, 0.12);
+        }
+
+
+        .floating-pill {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 12px 24px;
+            border-radius: 40px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 6;
+        }
+
+
+        .pill-1 {
+            top: -25px;
+            left: 60px;
+            transform: rotate(-4deg);
+        }
+
+
+        .pill-2 {
+            bottom: -20px;
+            right: 80px;
+            transform: rotate(3deg);
+        }
+
+
+        .pill-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+
+        /* ==========================================
+           SLIDE 2: MARKET RESEARCH
+           ========================================== */
+        .slide-2-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            margin-bottom: 8px;
+        }
+
+
+        .left-cards-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .market-info-card {
+            flex: 1;
+            padding: 30px 34px;
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            transition: all 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .market-info-card::after {
+            content: attr(data-index);
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 110px;
+            font-weight: 900;
+            color: rgba(255, 106, 28, 0.05);
+            line-height: 1;
+            pointer-events: none;
+            letter-spacing: -4px;
+        }
+
+
+        .market-info-card:nth-child(2)::after {
+            color: rgba(255, 180, 40, 0.08);
+        }
+
+
+        .market-info-card:nth-child(3)::after {
+            color: rgba(124, 92, 252, 0.06);
+        }
+
+
+        .market-info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(255, 106, 28, 0.09);
+        }
+
+
+        .card-icon-badge {
+            width: 72px;
+            height: 72px;
+            border-radius: 22px;
+            background: var(--main-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            flex-shrink: 0;
+            box-shadow: 0 10px 20px rgba(255, 106, 28, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .card-icon-badge.yellow {
+            background: var(--sub-gradient);
+            color: #5C4100;
+            box-shadow: 0 10px 20px rgba(255, 218, 98, 0.35);
+        }
+
+
+        .card-icon-badge.purple {
+            background: linear-gradient(135deg, #7C5CFC 0%, #9B82FF 100%);
+            box-shadow: 0 10px 20px rgba(124, 92, 252, 0.3);
+        }
+
+
+        .card-text-body {
+            flex: 1;
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .card-text-body h4 {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            letter-spacing: -0.4px;
+        }
+
+
+        .card-text-body p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.62;
+            font-weight: 500;
+            margin-bottom: 12px;
+            max-width: 560px;
+        }
+
+
+        .highlight-stat {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 6px;
+            color: var(--main-color);
+            font-weight: 900;
+            font-size: 29px;
+            margin-top: 2px;
+        }
+
+
+        .highlight-stat .unit {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+
+        .right-chart-panel {
+            padding: 30px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+
+        .chart-header-text h3 {
+            font-size: 25px;
+            font-weight: 800;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .chart-header-text p {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+
+        .chart-center-wrap {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 0;
+        }
+
+
+        .svg-chart-container {
+            width: 100%;
+            height: 380px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+
+        .chart-svg {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+
+        @keyframes commBgIconFloat {
+            0%, 100% { transform: translateY(0) rotate(-8deg) scale(1); opacity: 0.11; }
+            50% { transform: translateY(-12px) rotate(-5deg) scale(1.04); opacity: 0.16; }
+        }
+
+        .chart-bottom-callout {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 244, 236, 0.95) 100%);
+            border-left: 8px solid var(--main-color);
+            border-radius: 18px;
+            padding: 28px 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 10px 25px rgba(255, 106, 28, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            border-right: 1px solid rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+            flex-shrink: 0;
+        }
+
+
+        .callout-icon {
+            font-size: 44px;
+            color: var(--main-color);
+            flex-shrink: 0;
+        }
+
+
+        .callout-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .callout-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--main-color);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+
+        .callout-text {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.55;
+        }
+
+
+        .callout-text strong {
+            color: var(--main-color);
+            font-weight: 800;
+        }
+
+
+        /* ==========================================
+           SLIDE 3: SUCCESS REFERENCES
+           ========================================== */
+        .slide-3-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            margin-bottom: 8px;
+            min-height: 0;
+        }
+
+
+        .ref-case-card {
+            padding: 24px 30px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 100%;
+            gap: 14px;
+        }
+
+
+        .ref-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+
+        .case-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .case-badge {
+            background: var(--main-color);
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+            padding: 5px 12px;
+            border-radius: 8px;
+            letter-spacing: 0.5px;
+        }
+
+
+        .case-badge.yellow-theme {
+            background: #E89E00;
+        }
+
+
+        .case-title-wrap h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .case-cat-tag {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-muted);
+            background: rgba(0, 0, 0, 0.05);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+
+        .strategy-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 246, 240, 0.9) 100%);
+            border-radius: 18px;
+            padding: 16px 22px;
+            border: 1.5px solid rgba(255, 106, 28, 0.22);
+            border-left: 6px solid var(--main-color);
+            flex-shrink: 0;
+            box-shadow: 0 6px 18px rgba(255, 106, 28, 0.06);
+        }
+
+
+        .strategy-box.yellow-border {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 251, 235, 0.9) 100%);
+            border: 1.5px solid rgba(255, 218, 98, 0.45);
+            border-left: 6px solid #E89E00;
+            box-shadow: 0 6px 18px rgba(255, 218, 98, 0.08);
+        }
+
+
+        .strategy-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--main-color);
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.2px;
+        }
+
+
+        .strategy-icon-badge {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: var(--main-gradient);
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(255, 106, 28, 0.35);
+        }
+
+
+        .strategy-icon-badge.yellow-icon {
+            background: var(--sub-gradient);
+            color: #5C4100;
+            box-shadow: 0 4px 10px rgba(255, 218, 98, 0.4);
+        }
+
+
+        .strategy-text {
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--text-primary);
+            line-height: 1.48;
+            letter-spacing: -0.3px;
+        }
+
+
+        .strategy-text strong {
+            color: var(--main-color);
+            font-weight: 800;
+            background: rgba(255, 106, 28, 0.08);
+            padding: 1px 6px;
+            border-radius: 5px;
+        }
+
+
+        .strategy-box.yellow-border .strategy-text strong {
+            color: #A36200;
+            background: rgba(255, 218, 98, 0.2);
+        }
+
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+
+        .kpi-stat-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 246, 240, 0.9) 100%);
+            border: 1.5px solid rgba(255, 106, 28, 0.2);
+            border-radius: 16px;
+            padding: 12px 18px;
+            text-align: center;
+            box-shadow: 0 6px 16px rgba(255, 106, 28, 0.05);
+        }
+
+
+        .kpi-stat-box.yellow-kpi {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 251, 235, 0.9) 100%);
+            border: 1.5px solid rgba(255, 218, 98, 0.4);
+            box-shadow: 0 6px 16px rgba(255, 218, 98, 0.08);
+        }
+
+
+        .kpi-label {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+
+
+        .kpi-value {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--main-color);
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+
+        .kpi-value.yellow-val {
+            color: #D98200;
+        }
+
+
+        .kpi-sub {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #2E8B57;
+            margin-top: 2px;
+        }
+
+
+        .image-showcase-container {
+            flex: 1;
+            min-height: 0;
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            position: relative;
+            display: flex;
+        }
+
+
+        .single-image-wrap {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: #F8F7FC;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .single-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+
+        .single-image-wrap:hover img {
+            transform: scale(1.02);
+        }
+
+
+        .grid-image-wrap {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 10px;
+            background: #F8F7FC;
+        }
+
+
+        .grid-image-item {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .grid-image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.35s ease;
+        }
+
+
+        .grid-image-item:hover img {
+            transform: scale(1.03);
+        }
+
+
+        .image-tag-badge {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(18, 17, 28, 0.92);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #FFFFFF;
+            font-size: 14.5px;
+            font-weight: 800;
+            letter-spacing: -0.2px;
+            padding: 7px 16px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+            z-index: 10;
+        }
+
+
+        .image-tag-badge::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            background: #FF6A1C;
+            border-radius: 50%;
+        }
+
+
+        .image-tag-badge.yellow-dot::before {
+            background: #FFDA62;
+        }
+
+
+
+
+        /* ==========================================
+           SLIDE 4: CORE STRATEGY OVERVIEW
+           ========================================== */
+        .slide-4-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            margin-bottom: 8px;
+        }
+
+
+        .strategy-overview-card {
+            padding: 36px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+
+        .strategy-overview-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 45px rgba(255, 106, 28, 0.12);
+        }
+
+
+        .st-card-top {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+
+        .st-num-badge {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            background: var(--main-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            box-shadow: 0 8px 20px rgba(255, 106, 28, 0.3);
+        }
+
+
+        .st-num-badge.yellow {
+            background: var(--sub-gradient);
+            color: #4A3300;
+            box-shadow: 0 8px 20px rgba(255, 218, 98, 0.35);
+        }
+
+
+        .st-num-badge.purple {
+            background: linear-gradient(135deg, #7C5CFC 0%, #9B82FF 100%);
+            box-shadow: 0 8px 20px rgba(124, 92, 252, 0.3);
+        }
+
+
+        .st-card-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+
+        .st-card-subtitle {
+            font-size: 16.5px;
+            font-weight: 700;
+            color: var(--main-color);
+            background: rgba(255, 106, 28, 0.08);
+            padding: 6px 14px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 4px;
+        }
+
+
+        .st-card-body {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 18px;
+            padding: 26px 28px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+        }
+
+
+        .st-feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 17.5px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+
+        .st-feature-item::before {
+            content: '✔';
+            color: var(--main-color);
+            font-weight: 900;
+            margin-top: 1px;
+        }
+
+
+        /* ==========================================
+           SLIDE 5: LANDING PAGE DUAL STRATEGY
+           ========================================== */
+        .slide-5-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+
+        .slide-5-top-banner {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 246, 240, 0.95) 100%);
+            border: 1.5px solid rgba(255, 106, 28, 0.25);
+            border-radius: 20px;
+            padding: 16px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 8px 24px rgba(255, 106, 28, 0.06);
+            flex-shrink: 0;
+        }
+
+
+        .s5-banner-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .s5-banner-text strong {
+            color: var(--main-color);
+            font-weight: 800;
+        }
+
+
+        .slide-5-dual-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            min-height: 0;
+        }
+
+
+        .landing-type-card {
+            padding: 22px 26px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            height: 100%;
+        }
+
+
+        .type-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+
+        .type-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .type-pill {
+            background: var(--main-color);
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+
+        .type-title-wrap h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .type-desc-box {
+            background: rgba(255, 255, 255, 0.88);
+            border-radius: 14px;
+            padding: 12px 18px;
+            border-left: 4px solid var(--main-color);
+            font-size: 15.5px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            line-height: 1.45;
+            flex-shrink: 0;
+        }
+
+
+        .landing-img-container {
+            flex: 1;
+            min-height: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            position: relative;
+            display: flex;
+        }
+
+
+        .landing-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+        }
+
+
+        /* ==========================================
+           SLIDE 6: CREATIVE STRATEGY & MATRIX
+           ========================================== */
+        .slide-6-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            min-height: 0;
+        }
+
+
+        .matrix-left-col {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+
+
+        .matrix-card {
+            flex: 1;
+            padding: 26px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+        }
+
+
+        .matrix-badge-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .matrix-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .matrix-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .matrix-item {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 12px;
+            padding: 12px 18px;
+            font-size: 16.5px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .matrix-item strong {
+            color: var(--main-color);
+            font-weight: 800;
+        }
+
+
+        /* ==========================================
+           SLIDE 7, 8, 9: MEDIA STRATEGIES
+           ========================================== */
+        .media-split-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            min-height: 0;
+        }
+
+
+        .media-channel-card {
+            padding: 32px 34px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            height: 100%;
+        }
+
+
+        .media-channel-card > div:first-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .channel-top-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+
+        .channel-icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+        }
+
+
+        .channel-icon-circle.youtube {
+            background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+        }
+
+
+        .channel-icon-circle.search {
+            background: linear-gradient(135deg, #4285F4 0%, #1A73E8 100%);
+        }
+
+
+        .channel-icon-circle.naver-brand {
+            background: linear-gradient(135deg, #03C75A 0%, #009F44 100%);
+        }
+
+
+        .channel-icon-circle.naver-power {
+            background: linear-gradient(135deg, #1EC800 0%, #0FAF00 100%);
+        }
+
+
+        .channel-icon-circle.taboola {
+            background: linear-gradient(135deg, #0B5C96 0%, #003766 100%);
+        }
+
+
+        .channel-icon-circle.adin {
+            background: linear-gradient(135deg, #FF6A1C 0%, #D44800 100%);
+        }
+
+
+        .channel-title-box h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .channel-title-box p {
+            font-size: 15px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+
+        .channel-points-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+
+        .point-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--main-color);
+        }
+
+
+        .point-card h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+
+        .point-card p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+
+        .point-card strong {
+            color: var(--main-color);
+            font-weight: 800;
+        }
+
+
+        /* ==========================================
+           SLIDE 10: GA4 DATA ANALYSIS & FUNNEL
+           ========================================== */
+        .slide-10-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            min-height: 0;
+        }
+
+
+        .ga4-left-panel {
+            padding: 30px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+
+        .ga4-left-panel > div:first-child {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .ga4-kpi-highlight-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+
+        .ga4-kpi-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 246, 240, 0.9) 100%);
+            border: 2px solid rgba(255, 106, 28, 0.25);
+            border-radius: 18px;
+            padding: 18px 20px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(255, 106, 28, 0.08);
+        }
+
+
+        .ga4-kpi-val {
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--main-color);
+            line-height: 1.1;
+        }
+
+
+        .ga4-kpi-label {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+
+        .funnel-step-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+
+        .funnel-step-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 16px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+
+        .funnel-step-card:hover {
+            transform: translateX(4px);
+            border-color: var(--main-color);
+        }
+
+
+        .step-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+
+        .step-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--main-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+
+        .step-info h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .step-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+
+        /* ==========================================
+           SLIDE 11: LOOKER STUDIO REPORTING
+           ========================================== */
+        .slide-11-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 28px;
+            position: relative;
+            z-index: 5;
+            min-height: 0;
+        }
+
+
+        .looker-feature-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .looker-card {
+            flex: 1;
+            padding: 26px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+        .looker-card-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 18px;
+            background: var(--main-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(255, 106, 28, 0.3);
+        }
+
+
+        .looker-card-icon.yellow {
+            background: var(--sub-gradient);
+            color: #5C4100;
+            box-shadow: 0 8px 20px rgba(255, 218, 98, 0.35);
+        }
+
+
+        .looker-card-icon.purple {
+            background: linear-gradient(135deg, #7C5CFC 0%, #9B82FF 100%);
+            box-shadow: 0 8px 20px rgba(124, 92, 252, 0.3);
+        }
+
+
+        .looker-card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+
+        .looker-card h4 {
+            font-size: 21px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .looker-card p {
+            font-size: 17px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            line-height: 1.55;
+        }
+
+
+        .dashboard-mockup-panel {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+
+        .mockup-top-bar {
+            background: #1E1C2B;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+
+
+        .mockup-chart-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+
+        .m-metric-card {
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 14px;
+            border: 1px solid #EAE6F2;
+            text-align: center;
+        }
+
+
+        .m-metric-label {
+            font-size: 12.5px;
+            color: #7A7A8E;
+            font-weight: 700;
+        }
+
+
+        .m-metric-val {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--main-color);
+            margin-top: 4px;
+        }
+
+
+        /* ==========================================
+           SLIDE 12: COMMUNICATION & PROCESS
+           ========================================== */
+        .slide-12-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            position: relative;
+            z-index: 5;
+            min-height: 0;
+        }
+
+
+        .comm-pillar-card {
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            position: relative;
+        }
+
+
+        .comm-pillar-header {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+
+        .comm-icon-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 18px;
+            background: var(--main-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 8px 20px rgba(255, 106, 28, 0.3);
+        }
+
+
+        .comm-icon-box.yellow {
+            background: var(--sub-gradient);
+            color: #5C4100;
+            box-shadow: 0 8px 20px rgba(255, 218, 98, 0.35);
+        }
+
+
+        .comm-icon-box.purple {
+            background: linear-gradient(135deg, #7C5CFC 0%, #9B82FF 100%);
+            box-shadow: 0 8px 20px rgba(124, 92, 252, 0.3);
+        }
+
+
+        .comm-pillar-header h3 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+
+        .comm-content-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 26px 24px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 18px;
+        }
+
+
+        .comm-item {
+            font-size: 17px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+
+        .comm-item::before {
+            content: '•';
+            color: var(--main-color);
+            font-size: 20px;
+            line-height: 1;
+        }
+
+
+        /* ==========================================
+           SLIDE 13: E.O.D (END OF DOCUMENT)
+           ========================================== */
+        .eod-hero-card {
+            width: 1300px;
+            padding: 85px 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+
+        .eod-title {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            line-height: 1.25;
+        }
+
+
+        .eod-subtitle {
+            font-size: 24px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 50px;
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+
+        .eod-contact-row {
+            display: flex;
+            gap: 24px;
+        }
+
+
+        .contact-capsule {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--glass-border);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        }
+
+
+        /* ==========================================
+           READABILITY + ANIMATION REFINEMENTS (Slides 6-12)
+           ========================================== */
+        #slide-6, #slide-7, #slide-8, #slide-9, #slide-10, #slide-11, #slide-12 {
+            word-break: keep-all;
+            line-break: strict;
+        }
+
+        #slide-6 .header-title-box h2,
+        #slide-7 .header-title-box h2,
+        #slide-8 .header-title-box h2,
+        #slide-9 .header-title-box h2,
+        #slide-10 .header-title-box h2,
+        #slide-11 .header-title-box h2,
+        #slide-12 .header-title-box h2 {
+            font-size: 42px;
+            letter-spacing: -0.8px;
+            line-height: 1.18;
+        }
+
+        #slide-6 .tag-pill,
+        #slide-7 .tag-pill,
+        #slide-8 .tag-pill,
+        #slide-9 .tag-pill,
+        #slide-10 .tag-pill,
+        #slide-11 .tag-pill,
+        #slide-12 .tag-pill {
+            font-size: 16.5px;
+        }
+
+        #slide-6 .matrix-title { font-size: 27px; line-height: 1.28; }
+        #slide-6 .matrix-item { font-size: 19px; line-height: 1.55; padding: 15px 20px; }
+        #slide-6 .type-header h3 { font-size: 24px !important; }
+
+        #slide-7 .channel-title-box h3,
+        #slide-8 .channel-title-box h3,
+        #slide-9 .channel-title-box h3 { font-size: 30px; line-height: 1.25; }
+
+        #slide-7 .channel-title-box p,
+        #slide-8 .channel-title-box p,
+        #slide-9 .channel-title-box p { font-size: 17px; line-height: 1.45; }
+
+        #slide-7 .point-card h4,
+        #slide-8 .point-card h4,
+        #slide-9 .point-card h4 { font-size: 21px; line-height: 1.32; }
+
+        #slide-7 .point-card p,
+        #slide-8 .point-card p,
+        #slide-9 .point-card p { font-size: 18.2px; line-height: 1.58; }
+
+        #slide-10 .ga4-left-panel h3 { font-size: 29px !important; line-height: 1.32; }
+        #slide-10 .ga4-left-panel p { font-size: 19px !important; line-height: 1.6 !important; }
+        #slide-10 .ga4-kpi-highlight-row {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin: 24px 0 6px;
+        }
+        #slide-10 .ga4-kpi-box { padding: 28px 24px; border-radius: 22px; }
+        #slide-10 .ga4-kpi-val { font-size: 56px; }
+        #slide-10 .ga4-kpi-label { font-size: 18px; margin-top: 8px; }
+        #slide-10 .funnel-visual-panel {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(255, 247, 241, 0.9) 100%);
+        }
+        #slide-10 .funnel-visual-panel::before {
+            content: '';
+            position: absolute;
+            left: 82%;
+            top: 78px;
+            width: 98px;
+            height: 620px;
+            transform: translateX(-50%);
+            border-radius: 999px;
+            background: linear-gradient(180deg, rgba(255, 190, 150, 0.16) 0%, rgba(255, 106, 28, 0.34) 28%, rgba(255, 106, 28, 0.12) 100%);
+            filter: blur(18px);
+            opacity: 0.98;
+            z-index: 0;
+            pointer-events: none;
+            animation: funnelArrowShaft 4.3s ease-in-out infinite;
+        }
+        #slide-10 .funnel-visual-panel::after {
+            content: '';
+            position: absolute;
+            left: 82%;
+            bottom: 52px;
+            width: 280px;
+            height: 220px;
+            transform: translateX(-50%);
+            background: linear-gradient(180deg, rgba(255, 173, 120, 0.22) 0%, rgba(255, 106, 28, 0.38) 100%);
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+            filter: blur(18px);
+            opacity: 0.98;
+            z-index: 0;
+            pointer-events: none;
+            animation: funnelArrowHead 4.3s ease-in-out infinite;
+        }
+        #slide-10 .funnel-visual-panel > * { position: relative; z-index: 1; }
+        #slide-10 .funnel-visual-panel h3 { font-size: 27px !important; line-height: 1.3; max-width: 76%; }
+        #slide-10 .funnel-step-list {
+            position: relative;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 8px 58px 8px 0;
+        }
+        #slide-10 .funnel-step-card {
+            width: calc(100% - 48px);
+            padding: 22px 26px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        #slide-10 .step-info h4 { font-size: 22px; line-height: 1.3; }
+        #slide-10 .step-info p { font-size: 16.5px; line-height: 1.45; margin-top: 4px; }
+
+        #slide-11 .looker-feature-col { gap: 18px; }
+        #slide-11 .looker-card {
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            padding: 28px 30px;
+            gap: 16px;
+            border: 1.5px solid rgba(255, 106, 28, 0.12);
+        }
+        #slide-11 .looker-card-text {
+            width: 100%;
+            gap: 12px;
+        }
+        #slide-11 .looker-card h4 {
+            font-size: 33px;
+            line-height: 1.22;
+            font-weight: 900;
+            letter-spacing: -0.8px;
+            color: var(--text-primary);
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 3px solid rgba(255, 106, 28, 0.24);
+        }
+        #slide-11 .looker-card p {
+            font-size: 16.5px;
+            line-height: 1.58;
+            font-weight: 650;
+            color: var(--text-secondary);
+            max-width: 95%;
+        }
+        #slide-11 .dashboard-mockup-panel { padding: 26px; gap: 18px; }
+        #slide-11 .mockup-top-bar {
+            font-size: 16px;
+            padding: 14px 22px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 16px;
+            align-items: center;
+        }
+        #slide-11 .mockup-top-bar > span:first-child {
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #slide-11 .mockup-chart-grid { gap: 14px; }
+        #slide-11 .m-metric-card { padding: 16px 12px; }
+        #slide-11 .m-metric-label { font-size: 14px; line-height: 1.35; }
+        #slide-11 .m-metric-val { font-size: 26px; }
+        #slide-11 .channel-share-panel {
+            flex: 1;
+            background: #FFFFFF;
+            border-radius: 14px;
+            padding: 18px;
+            border: 1px solid #EAE6F2;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        #slide-11 .channel-share-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 12px;
+        }
+        #slide-11 .channel-share-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #1A1A1A;
+            line-height: 1.4;
+        }
+        #slide-11 .channel-share-sub {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #88889D;
+            white-space: nowrap;
+        }
+        #slide-11 .live-bars {
+            display: flex;
+            gap: 14px;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 170px;
+            padding-top: 4px;
+        }
+        #slide-11 .live-bar-wrap {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        #slide-11 .live-bar-label {
+            font-size: 14px;
+            font-weight: 800;
+            color: var(--text-secondary);
+            letter-spacing: -0.2px;
+            text-align: center;
+        }
+        #slide-11 .live-bar {
+            width: 100%;
+            max-width: 116px;
+            border-radius: 14px 14px 10px 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 12px;
+            box-shadow: 0 10px 18px rgba(32, 20, 50, 0.08);
+        }
+        #slide-11 .live-bar span {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.92);
+            color: #1A1A1A;
+            border-radius: 999px;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: 900;
+            line-height: 1;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        #slide-11 .live-summary-row {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        #slide-11 .live-summary-item {
+            flex: 1;
+            background: #F8F7FC;
+            border-radius: 10px;
+            padding: 10px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 700;
+            color: #5A586A;
+        }
+        #slide-11 .live-summary-item strong {
+            font-size: 14px;
+            font-weight: 900;
+            color: var(--text-primary);
+        }
+        #slide-11 .channel-share-note {
+            font-size: 13px;
+            color: #88889D;
+            font-weight: 600;
+            text-align: right;
+        }
+        #slide-11 .channel-share-panel {
+            justify-content: center;
+            min-height: 350px;
+        }
+        #slide-11 .channel-share-header {
+            align-items: center;
+        }
+        #slide-11 .live-bars {
+            flex: 1;
+            min-height: 225px;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 10px 34px 6px;
+            margin: 0 auto;
+            width: 82%;
+            gap: 22px;
+        }
+        #slide-11 .live-bar-wrap {
+            justify-content: flex-end;
+            height: 100%;
+        }
+        #slide-11 .live-bar {
+            max-width: 142px;
+            min-height: 46px;
+            transform-origin: bottom center;
+            will-change: height, transform, filter;
+            transition: height 0.35s ease;
+        }
+        #slide-11 .live-bar.naver { animation: naverBarDance 3.4s ease-in-out infinite !important; }
+        #slide-11 .live-bar.google { animation: googleBarDance 3.4s ease-in-out infinite .22s !important; }
+        #slide-11 .live-bar.taboola { animation: taboolaBarDance 3.4s ease-in-out infinite .44s !important; }
+        #slide-11 .live-summary-row {
+            width: 82%;
+            margin: 0 auto;
+        }
+        .live-sync-indicator {
+            color: #03C75A !important;
+            font-size: 13.5px !important;
+            font-weight: 900 !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .live-sync-indicator::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #03C75A;
+            box-shadow: 0 0 0 rgba(3, 199, 90, 0.45);
+            animation: syncPulse 1.7s ease-out infinite;
+        }
+        .live-bars { position: relative; overflow: hidden; }
+        .live-bars::after {
+            content: '';
+            position: absolute;
+            left: -30%;
+            top: 0;
+            width: 26%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+            transform: skewX(-18deg);
+            animation: liveSweep 2.8s ease-in-out infinite;
+        }
+        .live-bar {
+            position: relative;
+            transform-origin: bottom center;
+            animation: liveBarPulse 4.8s ease-in-out infinite;
+            will-change: transform, filter;
+        }
+        .live-bar.google { animation-delay: .45s; }
+        .live-bar.taboola { animation-delay: .9s; }
+        .live-bar span { position: relative; z-index: 2; }
+        #slide-12 .slide-12-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        #slide-12 .comm-pillar-card {
+            padding: 34px 30px 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 16px;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        #slide-12 .comm-pillar-card::before {
+            content: attr(data-bg-icon);
+            position: absolute;
+            right: 10px;
+            bottom: 26px;
+            font-size: 148px;
+            line-height: 1;
+            opacity: 0.16;
+            filter: blur(1.2px);
+            transform: rotate(-6deg);
+            z-index: 2;
+            pointer-events: none;
+            animation: commBgIconFloat 5.5s ease-in-out infinite;
+        }
+        #slide-12 .comm-pillar-card::after {
+            content: attr(data-index);
+            position: absolute;
+            left: 28px;
+            bottom: 16px;
+            font-size: 118px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -7px;
+            color: rgba(255, 106, 28, 0.038);
+            z-index: 0;
+            pointer-events: none;
+        }
+        #slide-12 .comm-pillar-card:nth-child(2)::before { opacity: 0.17; filter: blur(1.4px) saturate(1.15); animation-delay: .35s; }
+        #slide-12 .comm-pillar-card:nth-child(3)::before { opacity: 0.16; filter: blur(1.4px) saturate(1.1); animation-delay: .7s; }
+        #slide-12 .comm-pillar-card:nth-child(2)::after { color: rgba(255, 180, 40, 0.065); }
+        #slide-12 .comm-pillar-card:nth-child(3)::after { color: rgba(124, 92, 252, 0.055); }
+        #slide-12 .comm-pillar-header {
+            position: relative;
+            z-index: 3;
+            gap: 18px;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        #slide-12 .comm-icon-box {
+            width: 64px;
+            height: 64px;
+            font-size: 31px;
+            border-radius: 20px;
+            position: relative;
+            left: auto;
+            bottom: auto;
+            z-index: 3;
+            box-shadow: 0 12px 24px rgba(255, 106, 28, 0.16);
+            flex-shrink: 0;
+        }
+        #slide-12 .comm-focus-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: fit-content;
+            background: rgba(255, 106, 28, 0.1);
+            color: var(--main-color);
+            border: 1px solid rgba(255, 106, 28, 0.18);
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 850;
+            letter-spacing: -0.1px;
+            margin-left: 0;
+        }
+        #slide-12 .comm-focus-kicker::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--main-color);
+        }
+        #slide-12 .comm-pillar-header h3,
+        #slide-12 .comm-focus-title {
+            font-size: 42px;
+            line-height: 1.12;
+            font-weight: 950;
+            letter-spacing: -1.12px;
+            color: var(--text-primary);
+            max-width: 340px;
+            padding-left: 0;
+        }
+        #slide-12 .comm-focus-title .highlight {
+            color: var(--main-color);
+            background: rgba(255, 106, 28, 0.1);
+            padding: 2px 8px;
+            border-radius: 9px;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+        #slide-12 .comm-pillar-card:nth-child(3) .comm-focus-title {
+            max-width: none;
+            white-space: nowrap;
+            font-size: 37px;
+            letter-spacing: -1.25px;
+        }
+        #slide-12 .comm-content-box {
+            position: relative;
+            z-index: 1;
+            padding: 34px 28px 30px;
+            gap: 16px;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.78);
+            border-radius: 22px;
+            min-height: 270px;
+            overflow: hidden;
+        }
+        #slide-12 .comm-desc {
+            position: relative;
+            z-index: 3;
+            font-size: 21px;
+            line-height: 1.56;
+            font-weight: 700;
+            color: var(--text-secondary);
+            letter-spacing: -0.3px;
+            max-width: 78%;
+        }
+        #slide-12 .comm-desc strong {
+            color: var(--main-color);
+            font-weight: 900;
+        }
+        #slide-12 .comm-mini-list {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+            max-width: 80%;
+        }
+        #slide-12 .comm-mini-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            line-height: 1.5;
+            font-weight: 780;
+            color: var(--text-secondary);
+            letter-spacing: -0.24px;
+        }
+        #slide-12 .comm-mini-item::before {
+            content: '';
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--main-color);
+            flex-shrink: 0;
+        }
+        #slide-12 .comm-mini-item strong {
+            color: var(--main-color);
+            font-weight: 900;
+        }
+
+
+
+        .chart-bottom-callout {
+            font-weight: 850;
+            letter-spacing: -0.2px;
+        }
+        .chart-bottom-callout span:last-child {
+            font-weight: 850 !important;
+            line-height: 1.55 !important;
+        }
+        .chart-bottom-callout strong {
+            font-weight: 950 !important;
+            color: var(--main-color);
+            background: rgba(255, 106, 28, 0.1);
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        #slide-6 .chart-bottom-callout span:last-child,
+        #slide-7 .chart-bottom-callout span:last-child,
+        #slide-8 .chart-bottom-callout span:last-child,
+        #slide-9 .chart-bottom-callout span:last-child,
+        #slide-10 .chart-bottom-callout span:last-child,
+        #slide-11 .chart-bottom-callout span:last-child,
+        #slide-12 .chart-bottom-callout span:last-child { font-size: 18.5px !important; }
+
+        .slide.active .slide-header,
+        .slide.active .glass-panel,
+        .slide.active .chart-bottom-callout,
+        .slide.active .funnel-step-card,
+        .slide.active .matrix-item,
+        .slide.active .point-card,
+        .slide.active .comm-item {
+            animation: contentRise 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+        .slide.active .glass-panel:nth-child(2),
+        .slide.active .matrix-item:nth-child(2),
+        .slide.active .point-card:nth-child(2),
+        .slide.active .funnel-step-card:nth-child(2),
+        .slide.active .comm-item:nth-child(2) { animation-delay: 0.08s; }
+        .slide.active .glass-panel:nth-child(3),
+        .slide.active .matrix-item:nth-child(3),
+        .slide.active .point-card:nth-child(3),
+        .slide.active .funnel-step-card:nth-child(3),
+        .slide.active .comm-item:nth-child(3) { animation-delay: 0.16s; }
+
+        @keyframes contentRise {
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes funnelArrowShaft {
+            0%, 100% { opacity: 0.82; transform: translateX(-50%) translateY(-10px) scaleY(0.97); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(8px) scaleY(1.03); }
+        }
+        @keyframes funnelArrowHead {
+            0%, 100% { opacity: 0.8; transform: translateX(-50%) translateY(-8px) scale(0.97); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(10px) scale(1.03); }
+        }
+        @keyframes naverBarDance {
+            0%, 100% { height: 58%; transform: scaleY(1); filter: saturate(1); }
+            24% { height: 96%; transform: scaleY(1.035); filter: saturate(1.24); }
+            52% { height: 42%; transform: scaleY(0.96); filter: saturate(0.92); }
+            76% { height: 88%; transform: scaleY(1.02); filter: saturate(1.16); }
+        }
+        @keyframes googleBarDance {
+            0%, 100% { height: 48%; transform: scaleY(1); filter: saturate(1); }
+            22% { height: 86%; transform: scaleY(1.03); filter: saturate(1.2); }
+            54% { height: 36%; transform: scaleY(0.95); filter: saturate(0.92); }
+            80% { height: 94%; transform: scaleY(1.035); filter: saturate(1.18); }
+        }
+        @keyframes taboolaBarDance {
+            0%, 100% { height: 38%; transform: scaleY(1); filter: saturate(1); }
+            30% { height: 74%; transform: scaleY(1.04); filter: saturate(1.24); }
+            58% { height: 28%; transform: scaleY(0.94); filter: saturate(0.9); }
+            84% { height: 64%; transform: scaleY(1.02); filter: saturate(1.12); }
+        }
+
+        @keyframes syncPulse {
+            0% { box-shadow: 0 0 0 0 rgba(3, 199, 90, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(3, 199, 90, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(3, 199, 90, 0); }
+        }
+        @keyframes liveSweep {
+            0% { left: -35%; opacity: 0; }
+            15% { opacity: 1; }
+            60% { opacity: 1; }
+            100% { left: 110%; opacity: 0; }
+        }
+        @keyframes liveBarPulse {
+            0%, 100% { transform: scaleY(0.96); filter: saturate(1); }
+            35% { transform: scaleY(1.04); filter: saturate(1.18); }
+            65% { transform: scaleY(0.9); filter: saturate(0.95); }
+        }
+
+        #controls-bar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(26, 26, 36, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 100;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+            max-width: 95vw;
+            overflow-x: auto;
+        }
+
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 15px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+
+        .nav-btn:hover:not(:disabled) {
+            background: var(--main-color);
+            border-color: var(--main-color);
+            transform: scale(1.08);
+        }
+
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+
+        .nav-tabs {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .nav-tab-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Paperlogy', 'Pretendard', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+
+        .nav-tab-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+
+        .nav-tab-btn.active {
+            background: var(--main-gradient);
+            color: white;
+            box-shadow: 0 4px 14px rgba(255, 106, 28, 0.4);
+        }
+
+
+        .page-counter {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13.5px;
+            font-weight: 700;
+            min-width: 55px;
+            text-align: center;
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 10px;
+            flex-shrink: 0;
+        }
+
+
+        .fullscreen-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+            transition: color 0.2s ease;
+            flex-shrink: 0;
+        }
+
+
+        .fullscreen-btn:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="presentation-viewport">
+        <div id="slide-container">
+            <!-- Ambient Glowing Spheres -->
+            <div class="ambient-sphere sphere-1"></div>
+            <div class="ambient-sphere sphere-2"></div>
+            <div class="ambient-sphere sphere-3"></div>
+            <div class="grid-pattern"></div>
+
+
+            <!-- SLIDE 1: COVER (표지) -->
+            <div class="slide active" id="slide-1">
+                <div class="slide-1-content">
+                    <div class="glass-panel cover-hero-card">
+                        <div class="floating-pill pill-1">
+                            <div class="pill-icon">✦</div>
+                            <span>AMPM GLOBAL Performance Strategy</span>
+                        </div>
+                        <div class="floating-pill pill-2">
+                            <div class="pill-icon">📈</div>
+                            <span>Targeting & Landing Optimization</span>
+                        </div>
+
+
+                        <div class="cover-badge-top">
+                            INTEGRATED ONLINE MARKETING PROPOSAL
+                        </div>
+
+
+                        <h1 class="cover-title">
+                            건강기능식품 맞춤형<br>
+                            <span class="highlight-gradient">통합 온라인 퍼포먼스</span> 광고 제안서
+                        </h1>
+
+
+                        <p class="cover-subtitle">
+                            <strong>데이터 기반</strong> 타겟팅부터 랜딩페이지 최적화까지,<br>
+                            지속 가능한 매출 성장을 이끄는 <strong>End-to-End</strong> 맞춤 전략
+                        </p>
+
+
+                        <div class="cover-meta-container">
+                            <div class="meta-item">
+                                <span class="meta-label">담당자</span>
+                                <span>AMPMGLOBAL 퍼포먼스 3본부 2팀 <strong>고지훈 AE</strong></span>
+                            </div>
+                            <div class="meta-divider"></div>
+                            <div class="meta-item">
+                                <span class="meta-label">전략 구분</span>
+                                <span>건기식 업종 통합 퍼포먼스 캠페인</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 2: MARKET RESEARCH (시장 조사) -->
+            <div class="slide" id="slide-2">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">01. MARKET ANALYSIS</span>
+                        <div class="header-title-box">
+                            <h2>시장 조사 : <span class="accent">건기식 시장의 지속적 성장</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-2-grid">
+                    <div class="left-cards-col">
+                        <div class="glass-panel market-info-card" data-index="01">
+                            <div class="card-icon-badge">📊</div>
+                            <div class="card-text-body">
+                                <h4>셀프 메디케이션(Self-Care) 트렌드 확산</h4>
+                                <p>스스로 질환을 예방하고 관리하는 라이프스타일 확산으로 건강기능식품 시장규모가 가파르게 성장하고 있습니다.</p>
+                                <div class="highlight-stat">
+                                    6조 440억 <span class="unit">원 대 추정 돌파</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel market-info-card" data-index="02">
+                            <div class="card-icon-badge yellow">🏠</div>
+                            <div class="card-text-body">
+                                <h4>대중적 소비재로 안착 (보편적 구매 경험)</h4>
+                                <p>전국 10가구 중 8가구 이상이 연간 1회 이상 건기식을 직접 구매하며 필수 소비재로 자리매김했습니다.</p>
+                                <div class="highlight-stat" style="color: #D98200;">
+                                    82.1% <span class="unit">(10가구 중 8가구 이상 보유)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel market-info-card" data-index="03">
+                            <div class="card-icon-badge purple">👥</div>
+                            <div class="card-text-body">
+                                <h4>인구 구조 변화에 따른 지속 성장 잠재력</h4>
+                                <p>중·노년층 진료 인원 증가 및 중장년 인구 비중 확대로 4060 핵심 타겟의 객단가 및 재구매 수요가 지속 확대될 전망입니다.</p>
+                                <div class="highlight-stat" style="color: #7C5CFC;">
+                                    지속 우상향 <span class="unit">성장 모멘텀 유지</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel right-chart-panel">
+                        <div class="chart-center-wrap">
+                            <div class="chart-header">
+                                <div class="chart-header-text">
+                                    <h3>국내 건강기능식품 시장 규모 추이</h3>
+                                    <p>연도별 시장 규모 추정치 및 성장 궤적 (단위: 조 원)</p>
+                                </div>
+                            </div>
+
+
+                            <div class="svg-chart-container">
+                                <svg class="chart-svg" viewBox="0 0 760 290">
+                                    <defs>
+                                        <linearGradient id="chartAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0%" stop-color="#FF6A1C" stop-opacity="0.35" />
+                                            <stop offset="60%" stop-color="#FFDA62" stop-opacity="0.12" />
+                                            <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0" />
+                                        </linearGradient>
+                                        <linearGradient id="chartLineGrad" x1="0" y1="0" x2="1" y2="0">
+                                            <stop offset="0%" stop-color="#FF8F42" />
+                                            <stop offset="50%" stop-color="#FF6A1C" />
+                                            <stop offset="100%" stop-color="#FF3800" />
+                                        </linearGradient>
+                                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                            <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#FF6A1C" flood-opacity="0.4" />
+                                        </filter>
+                                    </defs>
+
+
+                                    <line x1="60" y1="50" x2="720" y2="50" stroke="#E2DFEE" stroke-width="1.2" stroke-dasharray="5 5" />
+                                    <line x1="60" y1="110" x2="720" y2="110" stroke="#E2DFEE" stroke-width="1.2" stroke-dasharray="5 5" />
+                                    <line x1="60" y1="170" x2="720" y2="170" stroke="#E2DFEE" stroke-width="1.2" stroke-dasharray="5 5" />
+                                    <line x1="60" y1="230" x2="720" y2="230" stroke="#CBC7DE" stroke-width="1.5" />
+
+
+                                    <text x="45" y="55" font-size="14" font-family="Paperlogy" fill="#88889D" text-anchor="end">6.5조</text>
+                                    <text x="45" y="115" font-size="14" font-family="Paperlogy" fill="#88889D" text-anchor="end">5.5조</text>
+                                    <text x="45" y="175" font-size="14" font-family="Paperlogy" fill="#88889D" text-anchor="end">4.5조</text>
+                                    <text x="45" y="235" font-size="14" font-family="Paperlogy" fill="#88889D" text-anchor="end">0</text>
+
+
+                                    <path d="M 120 185 C 230 175, 270 155, 340 148 C 430 140, 480 95, 560 88 C 620 82, 650 68, 680 62 L 680 230 L 120 230 Z" fill="url(#chartAreaGrad)" />
+
+
+                                    <rect x="98" y="185" width="44" height="45" rx="8" fill="rgba(255, 106, 28, 0.08)" />
+                                    <rect x="318" y="148" width="44" height="82" rx="8" fill="rgba(255, 106, 28, 0.08)" />
+                                    <rect x="538" y="88" width="44" height="142" rx="8" fill="rgba(255, 106, 28, 0.08)" />
+                                    <rect x="658" y="62" width="44" height="168" rx="8" fill="rgba(255, 106, 28, 0.16)" />
+
+
+                                    <path d="M 120 185 C 230 175, 270 155, 340 148 C 430 140, 480 95, 560 88 C 620 82, 650 68, 680 62" fill="none" stroke="url(#chartLineGrad)" stroke-width="5" filter="url(#glow)" />
+
+
+                                    <circle cx="120" cy="185" r="7" fill="#FFFFFF" stroke="#FF8F42" stroke-width="4" />
+                                    <text x="120" y="163" font-size="16" font-weight="700" font-family="Paperlogy" fill="#525266" text-anchor="middle">4.93조</text>
+                                    <text x="120" y="258" font-size="15" font-weight="600" font-family="Paperlogy" fill="#88889D" text-anchor="middle">2020년</text>
+
+
+                                    <circle cx="340" cy="148" r="7" fill="#FFFFFF" stroke="#FF8F42" stroke-width="4" />
+                                    <text x="340" y="126" font-size="16" font-weight="700" font-family="Paperlogy" fill="#525266" text-anchor="middle">5.04조</text>
+                                    <text x="340" y="258" font-size="15" font-weight="600" font-family="Paperlogy" fill="#88889D" text-anchor="middle">2021년</text>
+
+
+                                    <circle cx="560" cy="88" r="7" fill="#FFFFFF" stroke="#FF6A1C" stroke-width="4" />
+                                    <text x="560" y="66" font-size="16" font-weight="700" font-family="Paperlogy" fill="#525266" text-anchor="middle">5.85조</text>
+                                    <text x="560" y="258" font-size="15" font-weight="600" font-family="Paperlogy" fill="#88889D" text-anchor="middle">2022년</text>
+
+
+                                    <circle cx="680" cy="62" r="18" fill="rgba(255, 106, 28, 0.25)" />
+                                    <circle cx="680" cy="62" r="9" fill="#FF6A1C" stroke="#FFFFFF" stroke-width="4" />
+
+
+                                    <g transform="translate(680, 22)">
+                                        <rect x="-70" y="-22" width="140" height="32" rx="16" fill="#FF6A1C" filter="url(#glow)" />
+                                        <text x="0" y="-2" font-size="15.5" font-weight="800" font-family="Paperlogy" fill="#FFFFFF" text-anchor="middle">6조 440억 돌파 ✦</text>
+                                    </g>
+                                    <text x="680" y="258" font-size="15.5" font-weight="800" font-family="Paperlogy" fill="#FF6A1C" text-anchor="middle">최근 시장규모</text>
+                                </svg>
+                            </div>
+                        </div>
+
+
+                        <div class="chart-bottom-callout">
+                            <div class="callout-icon">💡</div>
+                            <div class="callout-content">
+                                <div class="callout-title">Strategic Takeaway (전략적 시사점)</div>
+                                <div class="callout-text">
+                                    진입 장벽이 낮아진 대중 소비 시장에서 지속 성장의 승패는 <strong>정교한 타겟 세분화</strong>와 <strong>랜딩페이지 전환율 극대화(CVR)</strong>에 달려 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 3: SUCCESS REFERENCES -->
+            <div class="slide" id="slide-3">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">02. SUCCESS REFERENCE</span>
+                        <div class="header-title-box">
+                            <h2>성공 레퍼런스 요약 : <span class="accent">실전 검증된 퍼포먼스 성과</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL CAMPAIGN</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-3-grid">
+                    <!-- Case 1: A사 -->
+                    <div class="glass-panel ref-case-card">
+                        <div class="ref-card-header">
+                            <div class="case-title-wrap">
+                                <span class="case-badge">CASE 01</span>
+                                <h3>A사 캠페인</h3>
+                            </div>
+                            <span class="case-cat-tag">전용 랜딩 & USP 전략</span>
+                        </div>
+
+
+                        <div class="strategy-box">
+                            <div class="strategy-title">
+                                <span class="strategy-icon-badge">🎯</span>
+                                <span>핵심 실행 전략</span>
+                            </div>
+                            <p class="strategy-text">
+                                검색 의도에 최적화된 <strong>전용 랜딩페이지</strong> 구축 및 핵심 소구점(USP) 기반 <strong>A/B 테스트</strong> 연속 실행
+                            </p>
+                        </div>
+
+
+                        <div class="kpi-row">
+                            <div class="kpi-stat-box">
+                                <div class="kpi-label">평균 DB 획득 단가</div>
+                                <div class="kpi-value">-34%</div>
+                                <div class="kpi-sub">▼ 획기적 비용 절감</div>
+                            </div>
+                            <div class="kpi-stat-box">
+                                <div class="kpi-label">최종 KPI 달성율</div>
+                                <div class="kpi-value">139%</div>
+                                <div class="kpi-sub">▲ 목표 초과 달성</div>
+                            </div>
+                        </div>
+
+
+                        <div class="image-showcase-container">
+                            <div class="single-image-wrap">
+                                <img src="https://lh3.googleusercontent.com/d/1rN356XlZEol5odwb6WkBqYT4KC60XmqR" alt="A사 집행 레퍼런스 소재" onerror="this.src='https://drive.google.com/thumbnail?id=1rN356XlZEol5odwb6WkBqYT4KC60XmqR&sz=w1200';">
+                                <div class="image-tag-badge">A사 전용 랜딩 및 크리에이티브 소재</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Case 2: 어바웃알파 -->
+                    <div class="glass-panel ref-case-card">
+                        <div class="ref-card-header">
+                            <div class="case-title-wrap">
+                                <span class="case-badge yellow-theme">CASE 02</span>
+                                <h3>어바웃알파 캠페인</h3>
+                            </div>
+                            <span class="case-cat-tag">키워드 & 입찰 최적화</span>
+                        </div>
+
+
+                        <div class="strategy-box yellow-border">
+                            <div class="strategy-title" style="color: #A36200;">
+                                <span class="strategy-icon-badge yellow-icon">⚡</span>
+                                <span>핵심 실행 전략</span>
+                            </div>
+                            <p class="strategy-text">
+                                전환 가능성 높은 <strong>고효율 키워드 집중 관리</strong> 및 데이터 분석 기반 <strong>실시간 입찰가 최적화</strong> 진행
+                            </p>
+                        </div>
+
+
+                        <div class="kpi-row">
+                            <div class="kpi-stat-box yellow-kpi">
+                                <div class="kpi-label">신규모수 & ROAS</div>
+                                <div class="kpi-value yellow-val">대폭 개선</div>
+                                <div class="kpi-sub">▲ 진성 유저 유입 극대화</div>
+                            </div>
+                            <div class="kpi-stat-box yellow-kpi">
+                                <div class="kpi-label">최종 KPI 달성율</div>
+                                <div class="kpi-value yellow-val">140%</div>
+                                <div class="kpi-sub">▲ 목표 초과 달성</div>
+                            </div>
+                        </div>
+
+
+                        <div class="image-showcase-container">
+                            <div class="grid-image-wrap">
+                                <div class="grid-image-item">
+                                    <img src="https://lh3.googleusercontent.com/d/1tfnuj_elnxkk15ofsTF-2StN_hESiYLc" alt="어바웃알파 랜딩페이지" onerror="this.src='https://drive.google.com/thumbnail?id=1tfnuj_elnxkk15ofsTF-2StN_hESiYLc&sz=w1200';">
+                                    <div class="image-tag-badge yellow-dot">랜딩페이지</div>
+                                </div>
+                                <div class="grid-image-item">
+                                    <img src="https://lh3.googleusercontent.com/d/1QLPMRyASF4px38EDqQm0JjmFKWyM-7EA" alt="어바웃알파 브랜드검색광고" onerror="this.src='https://drive.google.com/thumbnail?id=1QLPMRyASF4px38EDqQm0JjmFKWyM-7EA&sz=w1200';">
+                                    <div class="image-tag-badge yellow-dot">브랜드검색광고</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 4: CORE STRATEGY OVERVIEW -->
+            <div class="slide" id="slide-4">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">03. CORE STRATEGY</span>
+                        <div class="header-title-box">
+                            <h2>핵심 전략 오버뷰 : <span class="accent">매출 성장을 위한 3대 축</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-4-grid">
+                    <div class="glass-panel strategy-overview-card">
+                        <div class="st-card-top">
+                            <div class="st-num-badge">01</div>
+                            <h3 class="st-card-title">랜딩페이지 이원화</h3>
+                            <div class="st-card-subtitle">타겟 심리 맞춤형 분기</div>
+                        </div>
+                        <div class="st-card-body">
+                            <div class="st-feature-item">
+                                <span><strong>프리미엄 DB 수집형</strong> : 고관여 타겟을 위한 기술력·특허·비교 우위 강조</span>
+                            </div>
+                            <div class="st-feature-item">
+                                <span><strong>네이티브 뉴스형</strong> : 4060 세대 친화적 스토리텔링 및 공감대 형성</span>
+                            </div>
+                            <div class="st-feature-item">
+                                <span>매체 특성별 최적의 랜딩 매칭으로 <strong>이탈률 최소화</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel strategy-overview-card">
+                        <div class="st-card-top">
+                            <div class="st-num-badge yellow">02</div>
+                            <h3 class="st-card-title">크리에이티브 다양화</h3>
+                            <div class="st-card-subtitle" style="color: #A36200; background: rgba(255, 218, 98, 0.2);">USP 발굴 & A/B 테스트</div>
+                        </div>
+                        <div class="st-card-body">
+                            <div class="st-feature-item">
+                                <span><strong>제품 USP 극대화</strong> : 성분·배합·효능 중심의 직관적 후킹 포인트 발굴</span>
+                            </div>
+                            <div class="st-feature-item">
+                                <span><strong>타겟별 소구점 다변화</strong> : 연령·성별 맞춤형 카피라이팅 적용</span>
+                            </div>
+                            <div class="st-feature-item">
+                                <span>위너(Winner) 소재 발굴을 위한 <strong>연속적 A/B 테스트</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel strategy-overview-card">
+                        <div class="st-card-top">
+                            <div class="st-num-badge purple">03</div>
+                            <h3 class="st-card-title">매체 최적화 (Media Mix)</h3>
+                            <div class="st-card-subtitle" style="color: #7C5CFC; background: rgba(124, 92, 252, 0.12);">타겟 맞춤형 통합 운영</div>
+                        </div>
+                        <div class="st-card-body">
+                            <div class="st-feature-item">
+                                <span><strong>Google Ads</strong> : 유튜브 고관여 관심사 타겟팅 & 검색 확장</span>
+                            </div>
+                            <div class="st-feature-item">
+                                <span><strong>Naver 검색광고</strong> : 브랜드검색 & 파워링크 기기별 최적화</span>
+                            </div>
+                            <div class="st-feature-item">
+                                <span><strong>Native Ads</strong> : 타불라·애드인 언론 지면 집중 공략</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 5: LANDING PAGE STRATEGY -->
+            <div class="slide" id="slide-5">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">04. LANDING STRATEGY</span>
+                        <div class="header-title-box">
+                            <h2>랜딩페이지 전략 : <span class="accent">타겟 심리에 맞춘 이원화</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-5-container">
+                    <div class="slide-5-top-banner">
+                        <div class="s5-banner-text">
+                            <span>🏆 <strong>공통 메인 소구 포인트:</strong> 7개국 특허 등록, 글로벌 브랜드 대상 4관왕 수상 등 객관적 인증 데이터를 통한 브랜드 신뢰도 구축</span>
+                        </div>
+                        <span class="tag-pill">신뢰도 극대화</span>
+                    </div>
+
+
+                    <div class="slide-5-dual-grid">
+                        <div class="glass-panel landing-type-card">
+                            <div class="type-header">
+                                <div class="type-title-wrap">
+                                    <span class="type-pill">TYPE A</span>
+                                    <h3>프리미엄 DB 수집형</h3>
+                                </div>
+                                <span class="case-cat-tag">고관여 매체 타겟</span>
+                            </div>
+                            <div class="type-desc-box">
+                                프리미엄 이미지 필요 매체 타겟. 신뢰도(1등 브랜드, 기술력) 강조 및 타 성분 비교를 통한 명확한 헤드라인 구성
+                            </div>
+                            <div class="landing-img-container">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; width: 100%; height: 100%; gap: 8px; padding: 8px; background: #F8F7FC;">
+                                    <div style="height: 100%; border-radius: 10px; overflow: hidden; position: relative;">
+                                        <img src="https://lh3.googleusercontent.com/d/18NuEVWlI_ZfLghrseGoU9eAxATEYiov-" alt="프리미엄 신뢰도 강조" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;">
+                                        <div class="image-tag-badge" style="font-size: 12px; padding: 4px 10px; bottom: 8px; right: 8px;">브랜드 신뢰도</div>
+                                    </div>
+                                    <div style="height: 100%; border-radius: 10px; overflow: hidden; position: relative;">
+                                        <img src="https://lh3.googleusercontent.com/d/1k9YsIW3RgFY_N6U3Mpnnoxtw95kMgtrh" alt="USP 성분 비교" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;">
+                                        <div class="image-tag-badge" style="font-size: 12px; padding: 4px 10px; bottom: 8px; right: 8px;">성분 USP 비교</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel landing-type-card">
+                            <div class="type-header">
+                                <div class="type-title-wrap">
+                                    <span class="type-pill" style="background: #E89E00;">TYPE B</span>
+                                    <h3>네이티브 뉴스형</h3>
+                                </div>
+                                <span class="case-cat-tag">퍼포먼스 매체 타겟</span>
+                            </div>
+                            <div class="type-desc-box" style="border-left-color: #E89E00;">
+                                퍼포먼스 매체 타겟. 기사 형태의 친근한 스토리텔링으로 자사 제품 가치를 조명하고 경쟁사 대비 특장점을 자연스럽게 부각
+                            </div>
+                            <div class="landing-img-container">
+                                <img src="https://lh3.googleusercontent.com/d/1xdbDU-TuVTIGJ_vDEwXxzMCmM98DDlgh" alt="네이티브 뉴스형 랜딩" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;">
+                                <div class="image-tag-badge yellow-dot" style="font-size: 12.5px; padding: 5px 12px; bottom: 10px; right: 10px;">뉴스형 스토리텔링</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 6: CREATIVE STRATEGY -->
+            <div class="slide" id="slide-6">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">05. CREATIVE STRATEGY</span>
+                        <div class="header-title-box">
+                            <h2>소재 기획 및 크리에이티브 : <span class="accent">메시지 세분화 매트릭스</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-6-grid">
+                    <div class="matrix-left-col">
+                        <div class="glass-panel matrix-card">
+                            <div class="matrix-badge-row">
+                                <span class="case-badge">01</span>
+                                <h3 class="matrix-title">메인 랜딩용 크리에이티브</h3>
+                            </div>
+                            <div class="matrix-items-list">
+                                <div class="matrix-item">
+                                    <span>🎯 <strong>USP 직관 강조</strong> : 21가지 필수 성분, 하루 한 포, 특허 원료 등 핵심 스펙 집중</span>
+                                </div>
+                                <div class="matrix-item">
+                                    <span>👥 <strong>타겟 공감형 후킹</strong> : 30대 여성, 갱년기 고민 세대의 라이프스타일 페인포인트 자극</span>
+                                </div>
+                                <div class="matrix-item">
+                                    <span>⚡ <strong>오퍼(Offer) 극대화</strong> : 한정수량 할인, 약국 입점 기념 쿠폰팩 등 즉각 클릭 유도</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="glass-panel matrix-card">
+                            <div class="matrix-badge-row">
+                                <span class="case-badge yellow-theme">02</span>
+                                <h3 class="matrix-title">뉴스 랜딩용 크리에이티브</h3>
+                            </div>
+                            <div class="matrix-items-list">
+                                <div class="matrix-item">
+                                    <span>📰 <strong>정보 전달성 헤드라인</strong> : "갱년기 뱃살 안 빠지는 이유", "영양제 올바른 섭취법"</span>
+                                </div>
+                                <div class="matrix-item">
+                                    <span>🔍 <strong>호기심 유발형 콘텐츠</strong> : 언론 기사 포맷의 썸네일과 문진표 형태의 반응형 구성</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+                        <div class="type-header">
+                            <h3 style="font-size: 20px; font-weight: 800; color: var(--text-primary);">뉴스 랜딩 연계 소재</h3>
+                            <span class="tag-pill">위너 소재 발굴</span>
+                        </div>
+                        <div style="flex: 1; border-radius: 16px; overflow: hidden; background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); position: relative;">
+                            <img src="https://lh3.googleusercontent.com/d/1DWlAplVNkzuimOA2-tWVAy6ZSsPaq-Uh" alt="뉴스랜딩용 크리에이티브" style="width: 100%; height: 100%; object-fit: contain; object-position: center center;">
+                            <div class="image-tag-badge" style="font-size: 13px; bottom: 12px; right: 12px;">정보 전달성 후킹 소재</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 7: MEDIA STRATEGY 1 (GOOGLE ADS) -->
+            <div class="slide" id="slide-7">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">06. MEDIA MIX</span>
+                        <div class="header-title-box">
+                            <h2>매체 전략 1 : <span class="accent">구글 Ads (유튜브 & 검색)</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="media-split-grid">
+                    <div class="glass-panel media-channel-card">
+                        <div>
+                            <div class="channel-top-header">
+                                <div class="channel-icon-circle youtube">▶</div>
+                                <div class="channel-title-box">
+                                    <h3>YouTube 동영상 캠페인</h3>
+                                    <p>고관여 잠재고객 정밀 타겟팅 & 진성 DB 확보</p>
+                                </div>
+                            </div>
+                            <div class="channel-points-wrap">
+                                <div class="point-card">
+                                    <h4>🎯 정교한 관심사/인구통계 세그먼트</h4>
+                                    <p>건기식 고관여 타겟(50세 이상, 건강 관심사, 만성질환 케어) 맞춤형 인구통계 및 검색 이력 기반 <strong>정밀 오디언스 타겟팅</strong></p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>🛡 중복 DB 유입 방지 세그먼트 적용</h4>
+                                    <p>자사 DB 신청 완료 고객을 모수에서 즉시 제외하는 필터링을 구축하여 <strong>광고비 누수 방지 및 순수 진성 DB 확보</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-callout" style="padding: 14px 20px;">
+                            <span style="font-size: 20px;">💡</span>
+                            <span style="font-size: 15px;">시각적 스토리텔링 영상 소재로 신뢰도를 확보하고 랜딩페이지로 즉각 연결</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel media-channel-card">
+                        <div>
+                            <div class="channel-top-header">
+                                <div class="channel-icon-circle search">🔍</div>
+                                <div class="channel-title-box">
+                                    <h3>Google 검색 광고</h3>
+                                    <p>고효율 키워드 추출 & CPC 최적화</p>
+                                </div>
+                            </div>
+                            <div class="channel-points-wrap">
+                                <div class="point-card">
+                                    <h4>⚡ [일치] → [확장] 키워드 스케일업</h4>
+                                    <p>전환 성과가 검증된 [일치] 키워드에서 고효율 검색어를 선별한 후, <strong>[확장] 매칭 등록으로 CPC 절감 및 유입량 극대화</strong></p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>📊 실시간 입찰 전략 (Smart Bidding)</h4>
+                                    <p>전환 가치 극대화 및 타겟 CPA 입찰 알고리즘을 연동하여 <strong>구매 의도가 높은 유저 대상 상위 입찰 집중</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-callout" style="padding: 14px 20px;">
+                            <span style="font-size: 20px;">💡</span>
+                            <span style="font-size: 15px;">검색 의도에 완벽히 부합하는 전용 랜딩 URL 연결로 전환율(CVR) 극대화</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 8: MEDIA STRATEGY 2 (NAVER ADS) -->
+            <div class="slide" id="slide-8">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">07. MEDIA MIX</span>
+                        <div class="header-title-box">
+                            <h2>매체 전략 2 : <span class="accent">네이버 검색광고 (파워링크 & 브랜드검색)</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="media-split-grid">
+                    <div class="glass-panel media-channel-card">
+                        <div>
+                            <div class="channel-top-header">
+                                <div class="channel-icon-circle naver-brand">N</div>
+                                <div class="channel-title-box">
+                                    <h3>네이버 브랜드검색 (BS)</h3>
+                                    <p>최상단 독점 노출 & 프로모션 연계</p>
+                                </div>
+                            </div>
+                            <div class="channel-points-wrap">
+                                <div class="point-card">
+                                    <h4>📅 상시 vs 시즌 프로모션 소재 롤링</h4>
+                                    <p>기본 브랜드 신뢰도 소재와 시즌/이벤트 특가 프로모션 소재를 <strong>스케줄링 교체</strong>하여 유저의 광고 피로도 방지</p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>🎨 텍스트 & 이미지 그룹핑 CTR 테스트</h4>
+                                    <p>메인 카피 및 서브 썸네일 이미지 그룹핑을 통한 세부 A/B 테스트로 <strong>클릭률(CTR) 및 유입 퀄리티 지속 개선</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-callout" style="padding: 14px 20px;">
+                            <span style="font-size: 20px;">💡</span>
+                            <span style="font-size: 15px;">브랜드 키워드 유입 고객의 최종 전환율을 방어하는 핵심 앵커 역할</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel media-channel-card">
+                        <div>
+                            <div class="channel-top-header">
+                                <div class="channel-icon-circle naver-power">P</div>
+                                <div class="channel-title-box">
+                                    <h3>네이버 파워링크</h3>
+                                    <p>정밀 기기 분리 & 전환 중심 키워드 운영</p>
+                                </div>
+                            </div>
+                            <div class="channel-points-wrap">
+                                <div class="point-card">
+                                    <h4>📱 PC / Mobile 기기별 캠페인 분리</h4>
+                                    <p>기기별 입찰 가중치 및 소재를 분리 운영하고, 저효율 누수 지면(ZUM, Bing 등)을 <strong>전면 제외 처리하여 예산 효율화</strong></p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>🎯 전환 단위 키워드 그룹핑 고도화</h4>
+                                    <p>단순 노출량이 아닌 실제 'DB 획득 및 구매 전환' 데이터를 기준으로 <strong>키워드 묶음을 재편성하여 ROAS 극대화</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-callout" style="padding: 14px 20px;">
+                            <span style="font-size: 20px;">💡</span>
+                            <span style="font-size: 15px;">성분명·효능 키워드 중심의 정밀 세그먼트로 고효율 유입망 구축</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 9: MEDIA STRATEGY 3 (NATIVE ADS) -->
+            <div class="slide" id="slide-9">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">08. MEDIA MIX</span>
+                        <div class="header-title-box">
+                            <h2>매체 전략 3 : <span class="accent">네이티브 Ads (타불라 & 애드인)</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="media-split-grid">
+                    <div class="glass-panel media-channel-card">
+                        <div>
+                            <div class="channel-top-header">
+                                <div class="channel-icon-circle taboola">T</div>
+                                <div class="channel-title-box">
+                                    <h3>Taboola (타불라)</h3>
+                                    <p>글로벌 1위 콘텐츠 디스커버리 플랫폼</p>
+                                </div>
+                            </div>
+                            <div class="channel-points-wrap">
+                                <div class="point-card">
+                                    <h4>📰 40~60대 액티브 시니어 타겟 최적화</h4>
+                                    <p>주요 언론사 하단 추천 지면에 자연스럽게 노출되어 <strong>4060 세대의 정보 탐색 행동 패턴에 가장 적합</strong></p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>💡 뉴스형 스토리텔링 랜딩과 완벽 결합</h4>
+                                    <p>광고 거부감을 최소화하고 실제 기사를 읽는 듯한 흐름으로 <strong>고관여 제품 가치 전달 및 신뢰도 확보</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-callout" style="padding: 14px 20px;">
+                            <span style="font-size: 20px;">💡</span>
+                            <span style="font-size: 15px;">기존 검색광고에서 닿지 않는 광범위한 잠재고객 모수를 효율적으로 확보</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel media-channel-card">
+                        <div>
+                            <div class="channel-top-header">
+                                <div class="channel-icon-circle adin">A</div>
+                                <div class="channel-title-box">
+                                    <h3>Ad-In (애드인)</h3>
+                                    <p>국내 주요 언론사 기사면 단독 집행</p>
+                                </div>
+                            </div>
+                            <div class="channel-points-wrap">
+                                <div class="point-card">
+                                    <h4>💻 PC 언론 기사면 단독 지면 집중</h4>
+                                    <p>정보 탐색과 기사 정독 목적을 가진 <strong>진성 유저를 대상으로 고순도 DB 수집 가능</strong></p>
+                                </div>
+                                <div class="point-card">
+                                    <h4>⚡ 고효율 지면 입찰 가중치 운영</h4>
+                                    <p>매체별 CVR 성과 분석을 기반으로 전환율이 우수한 언론사 지면에 예산을 집중 배분</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-bottom-callout" style="padding: 14px 20px;">
+                            <span style="font-size: 20px;">💡</span>
+                            <span style="font-size: 15px;">정보성 건기식 콘텐츠와의 뛰어난 결합력으로 안정적인 전환 단가 유지</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 10: GA4 DATA ANALYSIS -->
+            <div class="slide" id="slide-10">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">09. DATA ANALYTICS</span>
+                        <div class="header-title-box">
+                            <h2>데이터 분석 및 최적화 : <span class="accent">GA4 기반 퍼널 개선</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-10-grid">
+                    <div class="glass-panel ga4-left-panel">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">단순 지표 조회를 넘어선 실행 인사이트 도출</h3>
+                            <p style="font-size: 16.5px; color: var(--text-secondary); line-height: 1.5; font-weight: 600;">
+                                GA4와 MMP 트래킹 데이터를 기반으로 고객 이탈 구간을 정밀 진단하고, 상세페이지 및 카피 개선안을 실시간 도출합니다.
+                            </p>
+
+
+                            <div class="ga4-kpi-highlight-row">
+                                <div class="ga4-kpi-box">
+                                    <div class="ga4-kpi-val">+21%</div>
+                                    <div class="ga4-kpi-label">평균 세션 시간 상승</div>
+                                </div>
+                                <div class="ga4-kpi-box">
+                                    <div class="ga4-kpi-val" style="color: #D98200;">+70%</div>
+                                    <div class="ga4-kpi-label">최종 전환율(CVR) 상승</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="chart-bottom-callout">
+                            <span style="font-size: 24px;">📊</span>
+                            <span style="font-size: 16px;"><strong>성과 검증 사례:</strong> 이탈 구간 UI 개선 후 동기간 대비 체류시간 및 구매 전환율 획기적 개선</span>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel funnel-visual-panel" style="padding: 30px; display: flex; flex-direction: column; gap: 16px;">
+                        <h3 style="font-size: 22px; font-weight: 800; color: var(--text-primary);">고객 여정 퍼널(Customer Journey) 시각화</h3>
+                        
+                        <div class="funnel-step-list" style="flex: 1; justify-content: center;">
+                            <div class="funnel-step-card">
+                                <div class="step-left">
+                                    <div class="step-num">1</div>
+                                    <div class="step-info">
+                                        <h4>사이트 유입 (Acquisition)</h4>
+                                        <p>매체별 유입 채널 성과 및 UTM 태깅 트래킹</p>
+                                    </div>
+                                </div>
+                                <span class="tag-pill" style="font-size: 13px;">유입 최적화</span>
+                            </div>
+
+
+                            <div class="funnel-step-card">
+                                <div class="step-left">
+                                    <div class="step-num" style="background: var(--sub-gradient); color: #4A3300;">2</div>
+                                    <div class="step-info">
+                                        <h4>콘텐츠 탐색 (Engagement)</h4>
+                                        <p>스크롤 깊이, 체류 시간, 성분표 확인 행동 분석</p>
+                                    </div>
+                                </div>
+                                <span class="tag-pill" style="font-size: 13px; background: rgba(255, 218, 98, 0.2); color: #A36200;">이탈 방지</span>
+                            </div>
+
+
+                            <div class="funnel-step-card">
+                                <div class="step-left">
+                                    <div class="step-num" style="background: linear-gradient(135deg, #7C5CFC 0%, #9B82FF 100%);">3</div>
+                                    <div class="step-info">
+                                        <h4>전환 및 구매 (Conversion)</h4>
+                                        <p>DB 신청 및 장바구니/결제 완료 퍼널 최종 도달</p>
+                                    </div>
+                                </div>
+                                <span class="tag-pill" style="font-size: 13px; background: rgba(124, 92, 252, 0.15); color: #7C5CFC;">CVR 극대화</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 11: LOOKER STUDIO REPORTING -->
+            <div class="slide" id="slide-11">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">10. TRANSPARENT REPORTING</span>
+                        <div class="header-title-box">
+                            <h2>투명한 리포팅 : <span class="accent">Looker Studio 실시간 대시보드</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-11-grid">
+                    <div class="looker-feature-col">
+                        <div class="glass-panel looker-card">
+                            <div class="looker-card-icon">⚡</div>
+                            <div class="looker-card-text">
+                                <h4>실시간 성과 조회</h4>
+                                <p>일별·캠페인별·매체별 성과를 한 화면에서 빠르게 확인하고 즉시 판단할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="glass-panel looker-card">
+                            <div class="looker-card-icon yellow">👥</div>
+                            <div class="looker-card-text">
+                                <h4>인구통계별 심층 분석</h4>
+                                <p>연령·성별 반응 차이를 확인해 타겟 세분화와 예산 재배분 방향을 더 선명하게 잡습니다.</p>
+                            </div>
+                        </div>
+                        <div class="glass-panel looker-card">
+                            <div class="looker-card-icon purple">🎨</div>
+                            <div class="looker-card-text">
+                                <h4>소재별 성과 기여도 파악</h4>
+                                <p>CTR·CVR 기여도를 비교해 위너 소재를 빠르게 선별하고 후속 디벨롭 방향을 정합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel dashboard-mockup-panel">
+                        <div class="mockup-top-bar">
+                            <span>📊 LIVE DASHBOARD: 건기식 통합 캠페인</span>
+                            <span class="live-sync-indicator">실시간 동기화 중</span>
+                        </div>
+
+
+                        <div class="mockup-chart-grid">
+                            <div class="m-metric-card">
+                                <div class="m-metric-label">총 노출수 (Imp)</div>
+                                <div class="m-metric-val">1,240만</div>
+                            </div>
+                            <div class="m-metric-card">
+                                <div class="m-metric-label">총 유입수 (Clicks)</div>
+                                <div class="m-metric-val">38.5만</div>
+                            </div>
+                            <div class="m-metric-card">
+                                <div class="m-metric-label">평균 전환율 (CVR)</div>
+                                <div class="m-metric-val">4.82%</div>
+                            </div>
+                        </div>
+
+
+                        <div class="channel-share-panel">
+                            <div class="channel-share-header">
+                                <div class="channel-share-title">매체별 전환 성과 비중</div>
+                                <div class="channel-share-sub">Google · Naver · Taboola</div>
+                            </div>
+                            <div class="live-bars">
+                                <div class="live-bar-wrap">
+                                    <div class="live-bar-label">네이버</div>
+                                    <div class="live-bar naver" style="height: 85%; background: var(--main-gradient); color: white;"><span>42%</span></div>
+                                </div>
+                                <div class="live-bar-wrap">
+                                    <div class="live-bar-label">구글</div>
+                                    <div class="live-bar google" style="height: 75%; background: var(--sub-gradient); color: #4A3300;"><span>35%</span></div>
+                                </div>
+                                <div class="live-bar-wrap">
+                                    <div class="live-bar-label">타불라</div>
+                                    <div class="live-bar taboola" style="height: 50%; background: linear-gradient(135deg, #7C5CFC 0%, #9B82FF 100%); color: white;"><span>23%</span></div>
+                                </div>
+                            </div>
+                            <div class="live-summary-row">
+                                <div class="live-summary-item"><span>네이버</span><strong>42%</strong></div>
+                                <div class="live-summary-item"><span>구글</span><strong>35%</strong></div>
+                                <div class="live-summary-item"><span>타불라</span><strong>23%</strong></div>
+                            </div>
+                            <div class="channel-share-note">* 루커스튜디오 맞춤 대시보드 권한 부여</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 12: COMMUNICATION & PROCESS -->
+            <div class="slide" id="slide-12">
+                <div class="slide-header">
+                    <div class="slide-tag-group">
+                        <span class="tag-pill">11. MANAGEMENT</span>
+                        <div class="header-title-box">
+                            <h2>커뮤니케이션 및 사후 관리 : <span class="accent">밀착 협업 체계</span></h2>
+                        </div>
+                    </div>
+                    <div class="header-brand">
+                        <div class="logo-dot"></div>
+                        <span>AMPM GLOBAL STRATEGY</span>
+                    </div>
+                </div>
+
+
+                <div class="slide-12-grid">
+                    <div class="glass-panel comm-pillar-card" data-index="01" data-bg-icon="📡">
+                        <div class="comm-pillar-header">
+                            <div class="comm-icon-box">🚨</div>
+                            <div class="comm-focus-kicker">운영 리스크 관리</div>
+                            <h3 class="comm-focus-title"><span class="highlight">실시간 이슈 대응</span></h3>
+                        </div>
+                        <div class="comm-content-box">
+                            <p class="comm-desc">예산 소진율과 이상 징후를 즉시 확인해 캠페인 운영 리스크를 빠르게 줄입니다.</p>
+                            <div class="comm-mini-list">
+                                <div class="comm-mini-item"><strong>예산·성과 이상 신호</strong> 상시 확인</div>
+                                <div class="comm-mini-item"><strong>긴급 이슈 1시간 내</strong> 대응 및 피드백</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel comm-pillar-card" data-index="02" data-bg-icon="🤝">
+                        <div class="comm-pillar-header">
+                            <div class="comm-icon-box yellow">🤝</div>
+                            <div class="comm-focus-kicker">성과 확장 협업</div>
+                            <h3 class="comm-focus-title"><span class="highlight">능동적 협업 전략</span></h3>
+                        </div>
+                        <div class="comm-content-box">
+                            <p class="comm-desc">성과가 나는 구간을 먼저 포착하고, 예산·랜딩·소재 개선안을 실행 단위로 제안합니다.</p>
+                            <div class="comm-mini-list">
+                                <div class="comm-mini-item"><strong>예산 증대 시뮬레이션</strong> 플랜 제시</div>
+                                <div class="comm-mini-item"><strong>UX/UI·소재 개선안</strong> 정기 공유</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="glass-panel comm-pillar-card" data-index="03" data-bg-icon="📊">
+                        <div class="comm-pillar-header">
+                            <div class="comm-icon-box purple">📋</div>
+                            <div class="comm-focus-kicker">다음 액션 정리</div>
+                            <h3 class="comm-focus-title"><span class="highlight">정기 점검 & 리포트</span></h3>
+                        </div>
+                        <div class="comm-content-box">
+                            <p class="comm-desc">주간·월간 성과를 핵심 지표 중심으로 정리하고, 다음 운영 방향까지 함께 제안합니다.</p>
+                            <div class="comm-mini-list">
+                                <div class="comm-mini-item"><strong>주간·월간 리포트</strong> 핵심 지표 공유</div>
+                                <div class="comm-mini-item"><strong>채널 효율성 재점검</strong> 및 미디어믹스 개선</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SLIDE 13: E.O.D (END OF DOCUMENT) -->
+            <div class="slide" id="slide-13">
+                <div class="slide-1-content">
+                    <div class="glass-panel eod-hero-card">
+                        <div class="floating-pill pill-1">
+                            <div class="pill-icon">✦</div>
+                            <span>AMPM GLOBAL Performance Marketing</span>
+                        </div>
+                        <div class="floating-pill pill-2">
+                            <div class="pill-icon">🤝</div>
+                            <span>Your Growth Partner</span>
+                        </div>
+
+
+                        <div class="cover-badge-top">
+                            THANK YOU FOR YOUR TIME
+                        </div>
+
+
+                        <h1 class="eod-title">
+                            성공적인 건강기능식품 퍼포먼스 마케팅,<br>
+                            <span class="highlight-gradient">AMPM GLOBAL</span>이 함께합니다.
+                        </h1>
+
+
+                        <p class="eod-subtitle">
+                            데이터 기반의 철저한 분석과 지속적인 최적화로<br>
+                            귀사의 확실한 매출 성장과 브랜드 가치를 증명해 보이겠습니다.
+                        </p>
+
+
+                        <div class="eod-contact-row">
+                            <div class="contact-capsule">
+                                <span style="color: var(--main-color);">👤</span>
+                                <span>퍼포먼스 3본부 2팀 <strong>고지훈 AE</strong></span>
+                            </div>
+                            <div class="contact-capsule">
+                                <span style="color: var(--main-color);">🏢</span>
+                                <span>(주)에이엠피엠글로벌</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Presentation Navigation Controls Bar (13 Slides) -->
+    <div id="controls-bar">
+        <button class="nav-btn" id="prev-btn" title="이전 슬라이드 (←)">❮</button>
+        <div class="nav-tabs">
+            <button class="nav-tab-btn active" data-slide="0">01 표지</button>
+            <button class="nav-tab-btn" data-slide="1">02 시장조사</button>
+            <button class="nav-tab-btn" data-slide="2">03 레퍼런스</button>
+            <button class="nav-tab-btn" data-slide="3">04 핵심전략</button>
+            <button class="nav-tab-btn" data-slide="4">05 랜딩전략</button>
+            <button class="nav-tab-btn" data-slide="5">06 소재기획</button>
+            <button class="nav-tab-btn" data-slide="6">07 구글Ads</button>
+            <button class="nav-tab-btn" data-slide="7">08 네이버Ads</button>
+            <button class="nav-tab-btn" data-slide="8">09 네이티브</button>
+            <button class="nav-tab-btn" data-slide="9">10 GA4분석</button>
+            <button class="nav-tab-btn" data-slide="10">11 리포팅</button>
+            <button class="nav-tab-btn" data-slide="11">12 사후관리</button>
+            <button class="nav-tab-btn" data-slide="12">13 E.O.D</button>
+        </div>
+        <button class="nav-btn" id="next-btn" title="다음 슬라이드 (→ / Space)">❯</button>
+        <div class="page-counter" id="page-counter">1 / 13</div>
+        <button class="fullscreen-btn" id="fullscreen-btn" title="전체화면 전환">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+        </button>
+    </div>
+
+
+    <script>
+        const container = document.getElementById('slide-container');
+        const baseWidth = 1920;
+        const baseHeight = 1080;
+        const barSpace = 110; // reserved space at bottom for the fixed control bar
+
+
+        function scalePresentation() {
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            const availableHeight = windowHeight - barSpace;
+            const scaleX = windowWidth / baseWidth;
+            const scaleY = availableHeight / baseHeight;
+            const scale = Math.min(scaleX, scaleY);
+
+
+            container.style.transform = `translateY(${-barSpace / 2}px) scale(${scale})`;
+        }
+
+
+        window.addEventListener('resize', scalePresentation);
+        window.addEventListener('load', scalePresentation);
+        scalePresentation();
+
+
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const tabBtns = document.querySelectorAll('.nav-tab-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const pageCounter = document.getElementById('page-counter');
+
+
+        function goToSlide(index) {
+            if (index < 0 || index >= slides.length) return;
+
+
+            slides[currentSlideIndex].classList.remove('active');
+            tabBtns[currentSlideIndex].classList.remove('active');
+
+
+            currentSlideIndex = index;
+
+
+            slides[currentSlideIndex].classList.add('active');
+            tabBtns[currentSlideIndex].classList.add('active');
+
+
+            tabBtns[currentSlideIndex].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
+
+            pageCounter.innerText = `${currentSlideIndex + 1} / ${slides.length}`;
+
+
+            prevBtn.disabled = currentSlideIndex === 0;
+            nextBtn.disabled = currentSlideIndex === slides.length - 1;
+        }
+
+
+        prevBtn.addEventListener('click', () => goToSlide(currentSlideIndex - 1));
+        nextBtn.addEventListener('click', () => goToSlide(currentSlideIndex + 1));
+
+
+        tabBtns.forEach((btn, idx) => {
+            btn.addEventListener('click', () => goToSlide(idx));
+        });
+
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                goToSlide(currentSlideIndex + 1);
+            } else if (e.key === 'ArrowLeft') {
+                goToSlide(currentSlideIndex - 1);
+            }
+        });
+
+
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        fullscreenBtn.addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log('Error attempting to enable fullscreen:', err.message);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        });
+
+
+        goToSlide(0);
+    </script>
+</body>
+</html>
