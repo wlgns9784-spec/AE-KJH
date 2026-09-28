@@ -47,7 +47,10 @@ export default {
       const payload = await upstream.text();
       let parsed;
       try { parsed = JSON.parse(payload); }
-      catch { return json({ error: `사전 API에서 JSON이 아닌 응답을 받았습니다 (${upstream.status}).`, detail: payload.slice(0, 500) }, 502, origin); }
+      catch {
+        const detail = payload.replace(/<script[\\s\\S]*?<\\/script>/gi, " ").replace(/<style[\\s\\S]*?<\\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " ").replace(/\\s+/g, " ").trim().slice(0, 220);
+        return json({ error: `사전 API에서 JSON이 아닌 응답을 받았습니다 (${upstream.status})${detail ? `: ${detail}` : ""}.`, detail }, 502, origin);
+      }
       return json(parsed, upstream.ok ? 200 : upstream.status, origin);
     } catch {
       return json({ error: "국립국어원 API에 연결하지 못했습니다. Worker 로그와 API 상태를 확인해 주세요." }, 502, origin);
