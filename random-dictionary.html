@@ -13,7 +13,7 @@
  <div class="field"><label for="dict">사전</label><select id="dict"><option value="stdict">표준국어대사전</option><option value="opendict">우리말샘</option></select></div>
  <div class="field"><label for="pos">품사</label><select id="pos"><option value="all">전체</option><option value="명사">명사</option><option value="동사">동사</option><option value="형용사">형용사</option></select></div>
  <div class="field" style="grid-column:1/-1"><label for="key">국립국어원 API 인증키</label><div class="keyrow"><input id="key" type="password" autocomplete="off" placeholder="발급받은 인증키를 입력하세요"><button class="smallbtn" id="saveKey">이 브라우저에 저장</button></div><label class="check"><input id="remember" type="checkbox"> 이 기기에 인증키 기억하기</label></div>
- <div class="field" style="grid-column:1/-1"><label for="proxy">API 연결 주소 (프록시 URL)</label><input id="proxy" type="url" placeholder="Cloudflare Worker 주소를 입력하세요"><label class="check">GitHub Pages에서 사용하려면 프록시가 필요합니다. 주소는 이 브라우저에만 저장됩니다.</label></div>
+ <div class="field" style="grid-column:1/-1"><label for="proxy">API 연결 주소 (프록시 URL)</label><input id="proxy" type="url" value="https://ae-kjh-dictionary-proxy-build.wlgns9784.workers.dev" placeholder="Cloudflare Worker 주소"><label class="check">GitHub Pages에서 사용하려면 프록시가 필요합니다. 주소는 이 브라우저에만 저장됩니다.</label></div>
  </div><div class="actions"><button class="primary" id="draw">🎲 단어 뽑기</button><button class="secondary" id="again">다시 뽑기</button></div><div class="status" id="status" aria-live="polite"></div>
  <div class="notice">이 도구는 API 검색 결과 중에서 무작위로 고릅니다. 사전 전체에서 완전히 균등하게 추출하는 방식은 아니며, API 응답과 검색어에 따라 결과가 달라질 수 있습니다. 인증키는 기본적으로 저장하지 않고, 체크한 경우에만 이 브라우저의 로컬 저장소에 보관됩니다.</div>
 </section>
