@@ -48,7 +48,7 @@ export default {
       let parsed;
       try { parsed = JSON.parse(payload); }
       catch {
-        const detail = payload.replace(/<script[\\s\\S]*?<\\/script>/gi, " ").replace(/<style[\\s\\S]*?<\\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " ").replace(/\\s+/g, " ").trim().slice(0, 220);
+        const detail = payload.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " ").replace(/\s+/g, " ").trim().slice(0, 220);
         return json({ error: `사전 API에서 JSON이 아닌 응답을 받았습니다 (${upstream.status})${detail ? `: ${detail}` : ""}.`, detail }, 502, origin);
       }
       return json(parsed, upstream.ok ? 200 : upstream.status, origin);
