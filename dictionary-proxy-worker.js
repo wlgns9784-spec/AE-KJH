@@ -38,7 +38,11 @@ export default {
     if (!key || !dictionary || !q) return json({ error: "인증키, 사전, 검색어를 확인해 주세요." }, 400, origin);
 
     const host = dictionary === "stdict" ? "stdict.korean.go.kr" : "opendict.korean.go.kr";
-    const params = new URLSearchParams({ key, q, req_type: "json", part: "word", sort: "dict", start: String(start), num: String(num) });
+    const params = new URLSearchParams({ key, q, req_type: "json", start: String(start), num: String(num) });
+    if (dictionary === "opendict") {
+      params.set("part", "word");
+      params.set("sort", "dict");
+    }
     const apiPath = dictionary === "stdict" ? "/api/search.do" : "/api/search";
     const upstreamUrl = `https://${host}${apiPath}?${params.toString()}`;
 
