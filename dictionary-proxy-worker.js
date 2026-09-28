@@ -39,8 +39,8 @@ export default {
 
     const host = dictionary === "stdict" ? "stdict.korean.go.kr" : "opendict.korean.go.kr";
     const params = new URLSearchParams({ key, q, req_type: "json", part: "word", sort: "dict", start: String(start), num: String(num) });
-    if (dictionary === "opendict") params.set("target_type", "search");
-    const upstreamUrl = `https://${host}/api/search?${params.toString()}`;
+    const apiPath = dictionary === "stdict" ? "/api/search.do" : "/api/search";
+    const upstreamUrl = `https://${host}${apiPath}?${params.toString()}`;
 
     try {
       const upstream = await fetch(upstreamUrl, { headers: { "Accept": "application/json" } });
